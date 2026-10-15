@@ -260,6 +260,8 @@ async function main() {
       hreflang: hreflang(meta.path),
     };
     let html = render(body, vars, partials);
+    if (!meta.noindex && meta.title.length > 65) console.warn(`  title ${meta.title.length} chars (Google shows ~60): ${meta.path}`);
+    if (!meta.noindex && (meta.description.length > 160 || meta.description.length < 70)) console.warn(`  description ${meta.description.length} chars (aim 70 to 160): ${meta.path}`);
     if (/\{\{|\}\}/.test(html)) throw new Error(`Unrendered template tag left in ${file}`);
     if (!meta.noindex) html = html.replace('</head>', `${jsonLd(meta, vars, html)}\n</head>`);
     if (/[–—]/.test(html.replace(/<!--[\s\S]*?-->/g, ''))) throw new Error(`En or em dash found in ${file}: site copy uses periods and commas instead`);

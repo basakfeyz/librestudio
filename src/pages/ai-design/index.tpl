@@ -1,4 +1,4 @@
-<!--page {"title": "AI-Enhanced Product Design: How We Work with AI · Libre Studio", "description": "How Libre Studio designs with AI: one seven-stage cycle across Figma, Claude Code and Cursor, atomic design foundations, and a designer who decides at every gate.", "path": "/ai-design/", "nav": "ai"} -->
+<!--page {"title": "AI-Enhanced Product Design: How We Work with AI · Libre Studio", "description": "How Libre Studio designs with AI: a seven-stage cycle across Figma, Claude Code and Cursor, atomic design foundations, and a designer at every gate.", "path": "/ai-design/", "nav": "ai"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

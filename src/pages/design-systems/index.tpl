@@ -1,4 +1,4 @@
-<!--page {"title": "Atomic Design Systems for Startups: Tokens, Components, One Source of Truth · Libre Studio", "description": "Atomic design systems for startups: design tokens named the same in Figma and code, atoms and molecules your team reuses, and AI agents that check every value against them.", "path": "/design-systems/", "nav": "services"} -->
+<!--page {"title": "Atomic Design Systems for Startups · Libre Studio", "description": "Atomic design systems for startups: tokens named the same in Figma and code, reusable components, and AI agents that check every value against them.", "path": "/design-systems/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

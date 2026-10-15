@@ -1,4 +1,4 @@
-<!--page {"title": "Echopod: AI-Assisted UX/UI Audit of a Mobile App · Libre Studio", "description": "An AI-assisted UX/UI audit of an AI podcast app: 105 prioritised items, a value and effort matrix and a Now, Next, Later plan, delivered as one interactive file.", "path": "/work/echopod-ux-audit/", "nav": "work"} -->
+<!--page {"title": "Echopod: AI-Assisted UX/UI Audit of a Mobile App · Libre Studio", "description": "An AI-assisted UX/UI audit of an AI podcast app: 105 prioritised items, a value and effort matrix and a Now, Next, Later plan in one interactive file.", "path": "/work/echopod-ux-audit/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

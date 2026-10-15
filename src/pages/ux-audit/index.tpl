@@ -1,4 +1,4 @@
-<!--page {"title": "AI-Assisted UX Audit for Startups, Delivered as a Product · Libre Studio", "description": "An AI-assisted UX audit for startups: agents audit UX, UI, accessibility, motion and design system end to end, delivered as a product that says what to fix first and when.", "path": "/ux-audit/", "nav": "services"} -->
+<!--page {"title": "AI-Assisted UX Audit for Startups · Libre Studio", "description": "An AI-assisted UX audit: agents check UX, UI, accessibility, motion and the design system end to end, delivered as a product that says what to fix first.", "path": "/ux-audit/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

@@ -1,4 +1,4 @@
-<!--page {"title": "Design Engineering Studio for Startups: Figma to Working Code · Libre Studio", "description": "Design engineering for startups: designs that arrive as working front ends, Figma files built from written specs with Claude Code, and handoff your developers can use in Cursor.", "path": "/design-engineering/", "nav": "services"} -->
+<!--page {"title": "Design Engineering for Startups: Figma to Code · Libre Studio", "description": "Design engineering for startups: designs that arrive as working front ends, Figma built from specs with Claude Code, and handoff ready for Cursor.", "path": "/design-engineering/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

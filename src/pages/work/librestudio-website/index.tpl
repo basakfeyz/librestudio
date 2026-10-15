@@ -1,4 +1,4 @@
-<!--page {"title": "Libre Studio Website: Design, Build, SEO and GEO Case Study · Libre Studio", "description": "How we designed and built librestudio.co: plain HTML from Figma with Claude Code, motion rules, zero third-party requests, and SEO and GEO so Google and AI answers can find us.", "path": "/work/librestudio-website/", "nav": "work"} -->
+<!--page {"title": "Libre Studio Website: Design, SEO and GEO · Libre Studio", "description": "How we designed and built librestudio.co in plain HTML with Claude Code, with zero third-party requests, and SEO and GEO for Google and AI answers.", "path": "/work/librestudio-website/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

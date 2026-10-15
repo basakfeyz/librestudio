@@ -1,4 +1,4 @@
-<!--page {"title": "Motion Design for Startups: Showreels, Product Videos and UI Motion · Libre Studio", "description": "Motion design for startups: showreels, product explanation videos, app animations and UI micro-interactions, built on motion tokens so every movement feels like the same brand.", "path": "/motion-design/", "nav": "services"} -->
+<!--page {"title": "Motion Design for Startups: Showreels, UI Motion · Libre Studio", "description": "Motion design for startups: showreels, product videos, app animations and UI micro-interactions, built on motion tokens so every movement is on-brand.", "path": "/motion-design/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

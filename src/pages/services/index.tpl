@@ -1,4 +1,4 @@
-<!--page {"title": "Product Design Services for Startups: UI, UX, Systems, Motion · Libre Studio", "description": "Product design services for startups: UI/UX design, UX audits, atomic design systems, design engineering, motion design and AI design workflows, from one remote studio.", "path": "/services/", "nav": "services"} -->
+<!--page {"title": "Product Design Services for Startups · Libre Studio", "description": "Product design services for startups: UI/UX design, AI-assisted UX audits, design systems, design engineering, motion, SEO and GEO.", "path": "/services/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

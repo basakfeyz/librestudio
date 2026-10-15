@@ -1,4 +1,4 @@
-<!--page {"title": "UI UX Design Studio for Startups: Mobile and Web Apps · Libre Studio", "description": "A UI UX design studio for startups: mobile app and web app UI/UX design, from research to a dev-ready prototype, with AI in the workflow and a designer on every call.", "path": "/ui-ux-design/", "nav": "services"} -->
+<!--page {"title": "UI/UX Design Studio for Startups · Libre Studio", "description": "A UI/UX design studio for startups: mobile apps, web apps, dashboards and websites, from research to a dev-ready prototype, with AI and a human in the loop.", "path": "/ui-ux-design/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

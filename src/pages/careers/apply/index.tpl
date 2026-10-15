@@ -1,4 +1,4 @@
-<!--page {"title": "Apply: Senior Product Designer, Freelance and Remote · Libre Studio", "description": "Senior product designer, freelance and remote, at Libre Studio: what you will work on, how we work, what we look for, and how we select, with a paid trial.", "path": "/careers/apply/", "nav": "careers"} -->
+<!--page {"title": "Apply: Senior Product Designer, Freelance · Libre Studio", "description": "Senior product designer, freelance and remote, at Libre Studio: what you will work on, how we work, what we look for, and how we select, with a paid trial.", "path": "/careers/apply/", "nav": "careers"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

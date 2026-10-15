@@ -1,4 +1,4 @@
-<!--page {"title": "AI-Enhanced Product Design Studio for Startups · Libre Studio", "description": "UI, UX and product design for startups, made with AI-assisted workflows and a designer in charge. Design engineering, motion and atomic design systems in Claude Code, Cursor and Figma Make.", "path": "/", "nav": "home"} -->
+<!--page {"title": "AI-Enhanced Product Design Studio for Startups · Libre Studio", "description": "UI, UX and product design for startups, made with AI-assisted workflows and a designer in charge. Design engineering, motion and atomic design systems.", "path": "/", "nav": "home"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

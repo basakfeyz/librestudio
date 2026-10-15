@@ -1,4 +1,4 @@
-<!--page {"title": "Aday ve Freelancer Aydınlatma Metni · Libre Studio", "description": "Başak Feyzioğlu (Libre Studio) tarafından freelance ve tam zamanlı çalışan adaylarının ve serbest çalışanların (freelancer) kişisel verilerinin işlenmesine ilişkin KVKK aydınlatma metni.", "path": "/kvkk-aday/", "lang": "tr", "nav": "kvkk"} -->
+<!--page {"title": "Aday ve Freelancer Aydınlatma Metni · Libre Studio", "description": "Başak Feyzioğlu (Libre Studio) tarafından aday ve freelancer kişisel verilerinin işlenmesine ilişkin KVKK aydınlatma metni.", "path": "/kvkk-aday/", "lang": "tr", "nav": "kvkk"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

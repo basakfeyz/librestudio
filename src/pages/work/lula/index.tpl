@@ -1,4 +1,4 @@
-<!--page {"title": "Lula: AI Bedtime Stories, End-to-End UI/UX Case Study · Libre Studio", "description": "How we designed Lula, an AI bedtime-story app, end to end: an onboarding that tells the first story before the paywall, a hand-made illustration style, and a 137-token design system.", "path": "/work/lula/", "nav": "work"} -->
+<!--page {"title": "Lula: AI Bedtime Stories, UI/UX Case Study · Libre Studio", "description": "How we designed Lula, an AI bedtime-story app, end to end: the first story before the paywall, a hand-made illustration style, a 137-token design system.", "path": "/work/lula/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

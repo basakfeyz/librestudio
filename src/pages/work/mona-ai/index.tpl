@@ -1,4 +1,4 @@
-<!--page {"title": "MONA AI: Photo & Video Studio, UI/UX and Motion Case Study · Libre Studio", "description": "How we designed MONA AI, an AI photo and video studio app, end to end: a style-first explore screen, photo guidance before upload, and an animated splash made with Kling AI.", "path": "/work/mona-ai/", "nav": "work"} -->
+<!--page {"title": "MONA AI: UI/UX and Motion Case Study · Libre Studio", "description": "How we designed MONA AI, an AI photo and video app, end to end: styles first, photo guidance before upload, and a splash animation made with Kling AI.", "path": "/work/mona-ai/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">

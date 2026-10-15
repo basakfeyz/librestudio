@@ -1,4 +1,4 @@
-<!--page {"title": "Tales AI Landing Page: CRO-Focused Waitlist Page with AI Imagery · Libre Studio", "description": "A pre-launch waitlist landing page for an AI bedtime-story app, designed for conversion and built in Next.js, with one AI-illustrated storybook world across every section.", "path": "/work/tales-ai-landing/", "nav": "work"} -->
+<!--page {"title": "Tales AI: CRO Landing Page with AI Imagery · Libre Studio", "description": "A pre-launch waitlist page for an AI bedtime-story app, designed for conversion, built in Next.js and illustrated with Nano Banana.", "path": "/work/tales-ai-landing/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
