@@ -119,14 +119,6 @@
     </div>
   </section>
 
-  <!-- Testimonial / 4 -->
-  <section class="section scheme-light" aria-label="What a client said">
-    <figure class="narrow quote" data-reveal>
-      <blockquote class="quote__text"><p>“You ask the right questions and bring the right solutions so we can build the right product.”</p></blockquote>
-      <figcaption class="quote__by">A client</figcaption>
-    </figure>
-  </section>
-
   <!-- FAQ / 2 -->
   <section class="section scheme-royal" aria-labelledby="faq-title">
     <div class="container">
