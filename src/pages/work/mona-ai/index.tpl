@@ -36,7 +36,8 @@
       <div class="ai-def">
         <h2 class="h2" id="problem-title" data-split>The problem</h2>
         <div class="text-lg prose" data-reveal>
-          <p>An AI photo app lives or dies on one loop: hand over a selfie, get back something you want to share. Every step that slows the loop, or produces a result that doesn't look like you, costs a user.</p>
+          <p>The idea was simple to say: start from your own picture and turn it into images and videos. Portraits of you, shots with your friends, couple photos, animated scenes.</p>
+          <p>The hard part was making that range feel simple. An AI photo app lives or dies on one loop: hand over a selfie, get back something you want to share. Every step that slows the loop, or produces a result that doesn't look like you, costs a user.</p>
         </div>
       </div>
       <div class="ai-def">
