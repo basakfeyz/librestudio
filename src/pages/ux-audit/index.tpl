@@ -1,4 +1,4 @@
-<!--page {"title": "UX Audit for Startups: AI-Enhanced UX/UI Audit for SaaS and Apps · Libre Studio", "description": "An AI-enhanced UX audit for startups: UX, UI, design tokens, accessibility, copy, motion and handoff, checked by AI agents and judged by a senior designer.", "path": "/ux-audit/", "nav": "services"} -->
+<!--page {"title": "AI-Assisted UX Audit for Startups, Delivered as a Product · Libre Studio", "description": "An AI-assisted UX audit for startups: agents audit UX, UI, accessibility, motion and design system end to end, delivered as a product that says what to fix first and when.", "path": "/ux-audit/", "nav": "services"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -7,9 +7,9 @@
     <div class="container hero__inner">
       <div class="hero__copy">
         <div class="stack">
-          <p class="eyebrow" data-reveal>AI-enhanced UX audit</p>
-          <h1 class="h1" id="ux-audit-title" data-split>A UX audit for startups that ends in a <span class="mark">plan<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
-          <p class="text-lg" data-reveal>A UX/UI audit for SaaS products and mobile apps. AI agents check every screen, token and transition. A senior designer judges every finding, and you get a prioritised list your team can start on the next morning.</p>
+          <p class="eyebrow" data-reveal>AI-assisted UX audit</p>
+          <h1 class="h1" id="ux-audit-title" data-split>An AI-assisted UX audit, delivered as a <span class="mark">product<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
+          <p class="text-lg" data-reveal>For startups with a live app or SaaS product. AI agents audit it end to end: UX, UI, design system, accessibility, motion, copy and handoff. A senior designer judges every finding. You get an interactive product, not a PDF, that tells your team which issue to fix first and when.</p>
         </div>
         <div class="actions actions--center" data-reveal>
           <a class="btn btn--lime" href="{{calendar}}" target="_blank" rel="noopener"><span class="btn__label"><span data-text="Book a Call">Book a Call</span></span></a>
@@ -25,7 +25,7 @@
         <h2 class="h2" id="what-title" data-split>What is a UX audit?</h2>
         <div class="text-lg prose" data-reveal>
           <p>A UX audit is a structured review of a digital product that finds where people get stuck, where the interface is inconsistent and where the design and the code have drifted apart. Each finding is tied to a specific screen or flow, rated by severity, and paired with a recommendation, so the team knows what to fix first and why.</p>
-          <p>Ours is AI-enhanced: AI agents do the repetitive checking across the whole product, and a senior designer decides what matters. It covers the live product and, when you have one, the Figma file behind it.</p>
+          <p>Ours is AI-assisted and delivered as a product. AI agents do the checking across the whole product, every screen, token, transition and contrast pair, which no person could do by hand in the same time. A senior designer decides what matters. It covers the live product and, when you have one, the Figma file behind it.</p>
         </div>
       </div>
       <div class="ai-def">
@@ -48,7 +48,7 @@
   <section class="section scheme-coral" aria-labelledby="how-title">
     <div class="container">
       <div class="section-title center narrow">
-        <h2 class="h2" id="how-title" data-split>How does an AI-enhanced UX audit work?</h2>
+        <h2 class="h2" id="how-title" data-split>How does an AI-assisted UX audit work?</h2>
         <p class="text-lg" data-reveal>AI does the legwork. A designer makes every call. It is the same human-in-the-loop process we use <a class="text-link" href="/ai-design/">across all our design work</a>.</p>
       </div>
       <ol class="cycle" data-reveal-group>
@@ -77,6 +77,22 @@
           <p><strong>Designer</strong> orders the plan, records the walkthrough and talks your team through it.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section scheme-dark" aria-labelledby="product-title">
+    <div class="container ai-def">
+      <h2 class="h2" id="product-title" data-split>Why deliver an audit as a product?</h2>
+      <div class="text-lg prose" data-reveal>
+        <p>Most audits end as a long PDF of problems, and the team is left to work out where to start. We deliver ours as a product: one interactive file the team opens, searches and filters, built from a single source so every finding is counted and none drops out.</p>
+        <p>It answers the question that matters after an audit: what do we fix first, and when?</p>
+        <ul>
+          <li><strong>Start here:</strong> the five highest-impact fixes, picked by a designer.</li>
+          <li><strong>Now (0 to 30 days):</strong> quick wins and trust fixes.</li>
+          <li><strong>Next (30 to 90 days):</strong> the priority sprint.</li>
+          <li><strong>Later (90 days and on):</strong> the bigger bets.</li>
+        </ul>
+      </div>
     </div>
   </section>
 

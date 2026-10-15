@@ -30,11 +30,9 @@
       <div class="footer__bottom">
         <p>&copy; {{year}} Libre Studio. All rights reserved.</p>
         <div class="footer__legal">
-          <a href="/privacy/">Privacy Notice</a>
-          <a href="/kvkk-aday/" lang="tr">KVKK Aydınlatma Metni</a>
+          <a href="/privacy/">Privacy · KVKK</a>
           <a href="/cookies/">Cookies</a>
-          <a href="/cerez-politikasi/" lang="tr">Çerez Politikası</a>
-          <a href="/kvkk-basvuru/" lang="tr">KVKK Başvuru Formu</a>
+          <a href="/kvkk-basvuru/">Data requests</a>
         </div>
       </div>
     </div>

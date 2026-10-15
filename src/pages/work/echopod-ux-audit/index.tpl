@@ -1,4 +1,4 @@
-<!--page {"title": "Echopod: AI-Enhanced UX/UI Audit of a Mobile App · Libre Studio", "description": "An AI-enhanced UX/UI audit of an AI podcast app: 105 prioritised items, a value and effort matrix and a Now, Next, Later plan, delivered as one interactive file.", "path": "/work/echopod-ux-audit/", "nav": "work"} -->
+<!--page {"title": "Echopod: AI-Assisted UX/UI Audit of a Mobile App · Libre Studio", "description": "An AI-assisted UX/UI audit of an AI podcast app: 105 prioritised items, a value and effort matrix and a Now, Next, Later plan, delivered as one interactive file.", "path": "/work/echopod-ux-audit/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -8,7 +8,7 @@
       <div class="hero__copy">
         <div class="stack">
           <p class="eyebrow" data-reveal>Case study · UX/UI audit</p>
-          <h1 class="h1" id="case-title" data-split>Echopod: an AI-enhanced UX/UI audit that ends in a <span class="mark">plan<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
+          <h1 class="h1" id="case-title" data-split>Echopod: an AI-assisted UX/UI audit that ends in a <span class="mark">plan<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
           <p class="text-lg" data-reveal>A full UX/UI audit of a mobile app that turns a short prompt into a podcast episode. 105 prioritised items, sorted by value and effort and sequenced into a sprint plan, delivered as one interactive file.</p>
         </div>
         <div class="actions actions--center" data-reveal>
@@ -37,9 +37,9 @@
   <section class="section scheme-light" aria-labelledby="problem-title">
     <div class="container split-rows">
       <div class="ai-def">
-        <h2 class="h2" id="what-title" data-split>What is an AI-enhanced UX/UI audit?</h2>
+        <h2 class="h2" id="what-title" data-split>What is an AI-assisted UX/UI audit?</h2>
         <div class="text-lg prose" data-reveal>
-          <p>An AI-enhanced UX/UI audit is a senior designer's review of a live product, where AI tools do the legwork of organising, cross-referencing and packaging the findings, and the designer makes every judgement. The result is a prioritised list of problems and recommendations, each tied to a screen, graded by severity and effort, and sequenced into what to fix first.</p>
+          <p>An AI-assisted UX/UI audit is a senior designer's review of a live product, where AI tools do the legwork of organising, cross-referencing and packaging the findings, and the designer makes every judgement. The result is a prioritised list of problems and recommendations, each tied to a screen, graded by severity and effort, and sequenced into what to fix first.</p>
           <p>Echopod is how we show one. It is a real client audit, anonymised end to end: same structure, same method, invented names and numbers.</p>
         </div>
       </div>

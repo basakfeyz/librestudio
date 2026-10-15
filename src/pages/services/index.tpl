@@ -30,7 +30,7 @@
           <p class="eyebrow">Design the product</p>
           <dl>
             <dt><a class="text-link" href="/ui-ux-design/">UI/UX design</a></dt><dd>Mobile apps, web apps and dashboards, from research to a dev-ready prototype.</dd>
-            <dt><a class="text-link" href="/ux-audit/">UX audit</a></dt><dd>Find what stops users in a live product, ranked by what to fix first.</dd>
+            <dt><a class="text-link" href="/ux-audit/">AI-assisted UX audit</a></dt><dd>Agents audit UX, UI, accessibility and motion end to end. Delivered as a product that says what to fix first and when.</dd>
           </dl>
         </div>
         <div class="tools__group" data-reveal>
@@ -63,7 +63,7 @@
     <div class="svc__grid" data-reveal-group>
       <article class="svc__col svc__col--coral" data-reveal="bar">
         <h3 class="svc__title">UX &amp; Product Design</h3>
-        <ul class="svc__list"><li>Strategy &amp; concepting</li><li><a class="svc__link" href="/ux-audit/">UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
+        <ul class="svc__list"><li>Strategy &amp; concepting</li><li><a class="svc__link" href="/ux-audit/">AI-assisted UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>

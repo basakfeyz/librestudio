@@ -41,7 +41,7 @@
     <div class="svc__grid" data-reveal-group>
       <article class="svc__col svc__col--coral" data-reveal="bar">
         <h3 class="svc__title">UX &amp; Product Design</h3>
-        <ul class="svc__list"><li>Strategy &amp; concepting</li><li>UX audit</li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
+        <ul class="svc__list"><li>Strategy &amp; concepting</li><li><a class="svc__link" href="/ux-audit/">AI-assisted UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>
