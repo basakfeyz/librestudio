@@ -17,6 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 {{robots}}
+{{hreflang}}
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/BricolageGrotesque-normal-latin.woff2" as="font" type="font/woff2" crossorigin>

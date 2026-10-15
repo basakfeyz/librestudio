@@ -11,6 +11,7 @@
         <a class="btn btn--lime" href="/"><span class="btn__label"><span data-text="Homepage">Homepage</span></span></a>
         <a class="btn btn--ghost-dark" href="/careers/"><span class="btn__label"><span data-text="Careers">Careers</span></span></a>
       </div>
+      <p class="text-sm" data-reveal>Looking for our work? See <a class="text-link" href="/#projects">Projects</a>. Something broken on our side? Tell us at <a class="text-link" href="mailto:{{email}}">{{email}}</a>.</p>
     </div>
   </section>
 </main>

@@ -22,7 +22,7 @@ The website of [Libre Studio](https://librestudio.co), a remote product design s
 - **Reduced motion respected.** With "reduce motion" on, everything lands at once and the showreel does not autoplay.
 - **The showreel, made light.** A 145 MB master became a 2.9 MB silent loop for the hero (1.5 MB on phones) and a 17 MB version with sound that loads only when someone presses play. The loop pauses off screen and has a pause button.
 - **Private by default.** Fonts and video are self-hosted and there is no analytics, so the site makes no third-party requests at all. The application form opens on ClickUp. A strict Content Security Policy allows only what each page needs.
-- **No framework, no dependencies.** A short Node script assembles the pages from templates. It fails the build on unrendered tags and on en or em dashes, a house style rule for client-facing copy.
+- **No framework, no dependencies.** A short Node script assembles the pages from templates. It fails the build on unrendered tags, on broken internal links and anchors, and on en or em dashes, a house style rule for client-facing copy.
 
 ## Run it locally
 
@@ -39,6 +39,7 @@ node preview.mjs   # http://localhost:4321, with the production headers
 build.mjs          builds dist/, writes _headers, _redirects, sitemap.xml, robots.txt
 preview.mjs        local server that mirrors the production headers
 netlify.toml       build settings for Netlify
+netlify/plugins/   IndexNow ping after each production deploy
 src/pages/         one .tpl per page
 src/partials/      head, navigation, footer
 src/assets/        css, js, fonts, images, video

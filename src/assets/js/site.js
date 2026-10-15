@@ -149,6 +149,10 @@
       reel.classList.toggle('is-paused', paused);
       toggle.setAttribute('aria-label', paused ? 'Play the showreel loop' : 'Pause the showreel loop');
     };
+    // if the loop file fails, the poster stays and the pause button goes: no dead control
+    const sources = loop.querySelectorAll('source');
+    if (sources.length) sources[sources.length - 1].addEventListener('error', () => reel.classList.add('is-broken'));
+    loop.addEventListener('error', () => reel.classList.add('is-broken'));
     toggle.addEventListener('click', () => { paused = !paused; sync(); });
     if (!inView) new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; sync(); }, { threshold: 0.2 }).observe(reel);
     document.addEventListener('visibilitychange', sync);

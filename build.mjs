@@ -4,7 +4,8 @@
 // {{current:key}} prints aria-current="page" when the page's "nav" equals key.
 // Each page starts with <!--page {...json...} --> holding its title, description, path, lang and nav key.
 
-import { readFile, writeFile, mkdir, readdir, cp, rm } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, cp, rm, stat } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -22,6 +23,17 @@ const SITE = {
   // Public share link of the ClickUp application form (forms.clickup.com/...). Empty = placeholder on /careers/apply/.
   clickup_form_url: 'https://forms.clickup.com/9009072703/f/8cfq2hz-15532/7ZKOGCKK691U98W3FE',
 };
+
+// Pages that are translations of each other: each gets hreflang links to both (and x-default to English).
+const ALTERNATES = [
+  { en: '/privacy/', tr: '/kvkk-aday/' },
+  { en: '/cookies/', tr: '/cerez-politikasi/' },
+];
+// IndexNow (Bing, Yandex and the engines that read Bing's index): the key file is published at /<key>.txt and
+// netlify/plugins/indexnow pings the sitemap's URLs after each production deploy.
+const INDEXNOW_KEY = '76fdde082d3b1c9f159cd54b5bff3696';
+// Crawlers we name explicitly so the welcome is on record, search and AI answer engines alike.
+const CRAWLERS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Applebot', 'Applebot-Extended', 'DuckDuckBot'];
 
 const FORM_ORIGIN = 'https://forms.clickup.com';
 if (SITE.clickup_form_url && !SITE.clickup_form_url.startsWith(FORM_ORIGIN + '/')) throw new Error('clickup_form_url must start with ' + FORM_ORIGIN);
@@ -59,6 +71,49 @@ async function walk(dir) {
   return out;
 }
 
+function hreflang(pagePath) {
+  const pair = ALTERNATES.find((a) => a.en === pagePath || a.tr === pagePath);
+  if (!pair) return '';
+  return [
+    `<link rel="alternate" hreflang="en" href="${SITE.origin}${pair.en}">`,
+    `<link rel="alternate" hreflang="tr" href="${SITE.origin}${pair.tr}">`,
+    `<link rel="alternate" hreflang="x-default" href="${SITE.origin}${pair.en}">`,
+  ].join('\n');
+}
+
+// Last change to a page's source, from git when the history is there (Netlify clones it), else the file date.
+async function lastmod(file) {
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%cs', '--', file], { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+    if (out) return out;
+  } catch {}
+  return (await stat(file)).mtime.toISOString().slice(0, 10);
+}
+
+// Every internal link, image, video and anchor in the built pages must point at something that exists.
+async function checkLinks(built, redirects) {
+  const ids = new Map(built.map(({ urlPath, html }) => [urlPath, new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]))]));
+  const problems = [];
+  for (const { urlPath, html } of built) {
+    for (const [, attr, raw] of html.matchAll(/\s(href|src|poster|srcset)="([^"]+)"/g)) {
+      for (const ref of attr === 'srcset' ? raw.split(',').map((s) => s.trim().split(/\s+/)[0]) : [raw]) {
+        if (/^(https?:|mailto:|tel:|data:|\/\/)/.test(ref)) continue;
+        const [pathPart, hash] = ref.split('#');
+        const target = pathPart === '' ? urlPath : pathPart.split('?')[0];
+        if (!target.startsWith('/')) { problems.push(`${urlPath}: relative link ${ref}`); continue; }
+        if (redirects.has(target)) continue;
+        if (target.endsWith('/')) {
+          if (!ids.has(target)) { problems.push(`${urlPath}: no page at ${ref}`); continue; }
+          if (hash && !ids.get(target).has(hash)) problems.push(`${urlPath}: no #${hash} on ${target}`);
+        } else {
+          try { await stat(path.join(OUT, target)); } catch { problems.push(`${urlPath}: missing file ${ref}`); }
+        }
+      }
+    }
+  }
+  if (problems.length) throw new Error('Broken internal links:\n  ' + problems.join('\n  '));
+}
+
 function render(tpl, vars, partials, depth = 0) {
   if (depth > 5) throw new Error('Partials nested too deep');
   let html = tpl.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, name) => {
@@ -90,6 +145,7 @@ async function main() {
 
   const pages = (await walk(path.join(SRC, 'pages'))).filter((f) => f.endsWith('.tpl'));
   const sitemap = [];
+  const built = [];
   for (const file of pages) {
     const raw = await readFile(file, 'utf8');
     const match = raw.match(/^<!--page\s+(\{[\s\S]*?\})\s*-->\n?/);
@@ -108,6 +164,7 @@ async function main() {
       canonical: SITE.origin + meta.path,
       nav: meta.nav || '',
       robots: meta.noindex ? '<meta name="robots" content="noindex">' : '',
+      hreflang: hreflang(meta.path),
     };
     const html = render(body, vars, partials);
     if (/\{\{|\}\}/.test(html)) throw new Error(`Unrendered template tag left in ${file}`);
@@ -117,7 +174,8 @@ async function main() {
     const outFile = rel === '404.tpl' ? path.join(OUT, '404.html') : path.join(OUT, rel.replace(/\.tpl$/, '.html'));
     await mkdir(path.dirname(outFile), { recursive: true });
     await writeFile(outFile, html);
-    if (!meta.noindex) sitemap.push(SITE.origin + meta.path);
+    built.push({ urlPath: rel === '404.tpl' ? '/404.html' : meta.path, html });
+    if (!meta.noindex) sitemap.push({ loc: SITE.origin + meta.path, lastmod: await lastmod(file) });
   }
 
   const scriptHash = sha(EARLY_JS, 'sha256', 'base64');
@@ -154,7 +212,7 @@ async function main() {
   Cache-Control: public, max-age=604800
 `);
 
-  await writeFile(path.join(OUT, '_redirects'), `/apply        /careers/apply/  301
+  const REDIRECTS = `/apply        /careers/apply/  301
 /culture      /careers/        301
 /join         /careers/        301
 /kvkk         /kvkk-aday/      301
@@ -164,10 +222,19 @@ async function main() {
 /cookie-policy  /cookies/      301
 /basvuru      /kvkk-basvuru/   301
 /consent      /acik-riza/#en   301
-`);
+`;
+  await writeFile(path.join(OUT, '_redirects'), REDIRECTS);
+  await checkLinks(built, new Set(REDIRECTS.trim().split('\n').map((l) => l.split(/\s+/)[0])));
 
-  await writeFile(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE.origin}/sitemap.xml\n`);
-  await writeFile(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.sort().map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);
+  const robots = [...CRAWLERS.map((ua) => `User-agent: ${ua}\nAllow: /\n`), 'User-agent: *\nAllow: /\n', `Sitemap: ${SITE.origin}/sitemap.xml\n`].join('\n');
+  await writeFile(path.join(OUT, 'robots.txt'), robots);
+  await writeFile(path.join(OUT, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
+  const xmlPages = sitemap.sort((a, b) => a.loc.localeCompare(b.loc)).map((u) => {
+    const pair = ALTERNATES.find((a) => SITE.origin + a.en === u.loc || SITE.origin + a.tr === u.loc);
+    const alt = pair ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${SITE.origin}${pair.en}"/>\n    <xhtml:link rel="alternate" hreflang="tr" href="${SITE.origin}${pair.tr}"/>` : '';
+    return `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${u.lastmod}</lastmod>${alt}\n  </url>`;
+  });
+  await writeFile(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${xmlPages.join('\n')}\n</urlset>\n`);
 
   console.log(`Built ${pages.length} pages into dist/ (css ${versions.css_v}, js ${versions.js_v})`);
 }

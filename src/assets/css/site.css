@@ -358,6 +358,7 @@ p { text-wrap: pretty; }
 .reel__icon-play { display: none; fill: currentColor !important; }
 .reel.is-paused .reel__icon-pause { display: none; }
 .reel.is-paused .reel__icon-play { display: block; }
+.reel.is-broken .reel__toggle { display: none; }
 @media (max-width: 767px) {
   .reel__open { padding: 12px; }
   .reel__toggle { right: 12px; bottom: 12px; width: 36px; height: 36px; }
