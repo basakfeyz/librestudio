@@ -54,6 +54,15 @@
   const words = new Map();
   document.querySelectorAll('[data-split]').forEach((el) => words.set(el, splitWords(el)));
   document.querySelectorAll('[data-draw]').forEach(prepareDraw);
+  // Chrome can keep painting a marked word with the fallback font's glyphs after the webfont arrives,
+  // when nothing animates it (reduced motion): nudge a repaint once the fonts are ready.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => document.querySelectorAll('[data-split]').forEach((h) => {
+      if (!h.querySelector('.mark')) return;
+      h.style.outline = '0 solid transparent';
+      requestAnimationFrame(() => requestAnimationFrame(() => { h.style.outline = ''; }));
+    }));
+  }
 
   /* ---------------------------------------------------------------- reveal on scroll */
   document.querySelectorAll('[data-reveal-group]').forEach((group) => {
