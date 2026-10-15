@@ -806,3 +806,18 @@ a.proj:hover .proj__name { background-size: 100% 1.5px; }
 .upwork-card__name { color: var(--white); margin-top: 8px; font-family: var(--font-head); font-size: var(--h5); font-weight: 500; font-variation-settings: "opsz" 14; }
 .upwork-card__text { font-size: var(--text-sm); color: var(--white-70); }
 .upwork-card__cta { margin-top: 8px; font-weight: 600; color: var(--lime); }
+
+/* ------------------------------------------------------------------ consent banner (Google Analytics, opt-in) */
+.consent { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60; display: flex; justify-content: center; pointer-events: none; }
+.consent__inner {
+  pointer-events: auto; display: flex; align-items: center; gap: 16px 24px; flex-wrap: wrap;
+  max-width: 760px; padding: 16px 20px; border-radius: var(--radius-lg);
+  background: var(--ink); color: var(--white); border: 1px solid var(--white-20); box-shadow: 0 16px 40px rgba(13, 6, 6, 0.35); --focus: var(--lime);
+  transform: translateY(12px); opacity: 0; transition: transform var(--dur-in, 420ms) var(--ease-out), opacity var(--dur-in, 420ms) var(--ease-out);
+}
+.consent.is-open .consent__inner { transform: none; opacity: 1; }
+.consent__text { flex: 1 1 320px; font-size: var(--text-sm); line-height: 1.5; }
+.consent__text a { color: inherit; }
+.consent__actions { display: flex; gap: 12px; }
+.footer__cookie-btn { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+@media (max-width: 479px) { .consent__actions { width: 100%; } .consent__actions .btn { flex: 1; } }

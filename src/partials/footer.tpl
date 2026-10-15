@@ -33,10 +33,12 @@
           <a href="/privacy/">Privacy · KVKK</a>
           <a href="/cookies/">Cookies</a>
           <a href="/kvkk-basvuru/">Data requests</a>
+          {{cookie_settings}}
         </div>
       </div>
     </div>
   </div>
 </footer>
+{{consent_banner}}
 </body>
 </html>

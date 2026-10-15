@@ -228,4 +228,50 @@
     links.forEach((_, id) => { const s = document.getElementById(id); if (s) tocIo.observe(s); });
   }
 
+  /* ---------------------------------------------------------------- analytics: Google Analytics 4, strictly opt-in */
+  // Nothing from Google loads until the visitor presses Accept. The choice lives in localStorage ("ls-consent").
+  const gaMeta = document.querySelector('meta[name="ga-id"]');
+  const banner = document.querySelector('[data-consent]');
+  if (gaMeta && banner) {
+    const GA_ID = gaMeta.content;
+    const KEY = 'ls-consent';
+    const read = () => { try { return localStorage.getItem(KEY); } catch { return null; } };
+    const write = (v) => { try { localStorage.setItem(KEY, v); } catch {} };
+    let loaded = false;
+    const loadGA = () => {
+      if (loaded) return;
+      loaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_ID)}`;
+      document.head.appendChild(s);
+    };
+    const clearGACookies = () => {
+      const host = location.hostname;
+      document.cookie.split(';').map((c) => c.trim().split('=')[0]).filter((n) => /^_ga/.test(n)).forEach((n) => {
+        [host, '.' + host, '.' + host.replace(/^www\./, '')].forEach((d) => { document.cookie = `${n}=; Max-Age=0; path=/; domain=${d}`; });
+        document.cookie = `${n}=; Max-Age=0; path=/`;
+      });
+    };
+    const show = () => { banner.hidden = false; requestAnimationFrame(() => banner.classList.add('is-open')); };
+    const hide = () => { banner.classList.remove('is-open'); banner.hidden = true; };
+    banner.querySelectorAll('[data-consent-choice]').forEach((btn) => btn.addEventListener('click', () => {
+      const choice = btn.dataset.consentChoice;
+      const before = read();
+      write(choice);
+      hide();
+      if (choice === 'granted') loadGA();
+      else if (before === 'granted') { clearGACookies(); location.reload(); }
+    }));
+    document.querySelectorAll('[data-consent-open]').forEach((b) => b.addEventListener('click', show));
+    const choice = read();
+    if (choice === 'granted') loadGA();
+    else if (choice !== 'denied') show();
+  }
+
 })();

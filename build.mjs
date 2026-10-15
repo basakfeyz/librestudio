@@ -21,6 +21,9 @@ const SITE = {
   year: String(new Date().getFullYear()),
   notice_version: '2026-10-15',
   // Public share link of the ClickUp application form (forms.clickup.com/...). Empty = placeholder on /careers/apply/.
+  // Google Analytics 4 Measurement ID (G-XXXXXXXXXX). Empty = no analytics, no banner, CSP stays closed.
+  // GA loads only after a visitor presses Accept in the consent banner (site.js). Ruling: Başak, 15 Oct 2026.
+  ga_id: '',
   clickup_form_url: 'https://forms.clickup.com/9009072703/f/8cfq2hz-15532/7ZKOGCKK691U98W3FE',
 };
 
@@ -137,7 +140,7 @@ const APPLY_FORM = SITE.clickup_form_url
   ? `<div class="apply__form apply__gate" data-reveal>
         <div class="apply__gate-inner">
           <p class="h5">The form opens on ClickUp</p>
-          <p>Our application form is hosted by ClickUp and opens on their site in a new tab. ClickUp and the services it works with may set their own cookies there, under ClickUp's policies. This site sets none. Details: <a class="text-link" href="/cookies/">Cookie Notice</a> · <a class="text-link" href="/cerez-politikasi/" lang="tr">Çerez Aydınlatma Metni</a>.</p>
+          <p>Our application form is hosted by ClickUp and opens on their site in a new tab. ClickUp and the services it works with may set their own cookies there, under ClickUp's policies. This site sets none unless you accept analytics. Details: <a class="text-link" href="/cookies/">Cookie Notice</a> · <a class="text-link" href="/cerez-politikasi/" lang="tr">Çerez Aydınlatma Metni</a>.</p>
           <div class="apply__gate-actions">
             <a class="btn btn--lime" href="${esc(SITE.clickup_form_url)}" target="_blank" rel="noopener">Open the application form</a>
           </div>
@@ -151,6 +154,20 @@ const APPLY_FORM = SITE.clickup_form_url
 
 // The one inline script: adds .js before first paint, and removes it again if site.js never arrives.
 const EARLY_JS = "document.documentElement.classList.add('js');setTimeout(function(){if(!window.siteReady)document.documentElement.classList.remove('js')},2500);";
+
+const GA = /^G-[A-Z0-9]{6,12}$/.test(SITE.ga_id) ? SITE.ga_id : '';
+if (SITE.ga_id && !GA) throw new Error('ga_id must look like G-XXXXXXXXXX');
+const GA_META = GA ? `<meta name="ga-id" content="${GA}">` : '';
+const CONSENT_BANNER = GA ? `<div class="consent" role="region" aria-label="Cookie consent" data-consent hidden>
+  <div class="consent__inner">
+    <p class="consent__text">We use Google Analytics to see which pages help people, only if you accept. No cookies are set until you choose. <a class="text-link" href="/cookies/">Cookie Notice</a> · <a class="text-link" href="/cerez-politikasi/" lang="tr">Çerez Aydınlatma Metni</a></p>
+    <div class="consent__actions">
+      <button type="button" class="btn btn--ghost-dark btn--sm" data-consent-choice="denied"><span class="btn__label"><span data-text="Decline">Decline</span></span></button>
+      <button type="button" class="btn btn--lime btn--sm" data-consent-choice="granted"><span class="btn__label"><span data-text="Accept">Accept</span></span></button>
+    </div>
+  </div>
+</div>` : '';
+const COOKIE_SETTINGS = GA ? '<button type="button" class="footer__cookie-btn" data-consent-open>Cookie settings</button>' : '';
 
 const sha = (buf, alg = 'sha256', enc = 'hex') => createHash(alg).update(buf).digest(enc);
 
@@ -250,6 +267,9 @@ async function main() {
       ...versions,
       early_js: EARLY_JS,
       apply_form: APPLY_FORM,
+      ga_meta: GA_META,
+      consent_banner: CONSENT_BANNER,
+      cookie_settings: COOKIE_SETTINGS,
       lang: meta.lang || 'en',
       title: meta.title,
       description: meta.description,
@@ -277,12 +297,12 @@ async function main() {
   const scriptHash = sha(EARLY_JS, 'sha256', 'base64');
   const csp = [
     "default-src 'self'",
-    `script-src 'self' 'sha256-${scriptHash}'`,
+    `script-src 'self' 'sha256-${scriptHash}'${GA ? ' https://www.googletagmanager.com' : ''}`,
     "style-src 'self'",
-    "img-src 'self' data:",
+    `img-src 'self' data:${GA ? ' https://*.google-analytics.com https://*.googletagmanager.com' : ''}`,
     "media-src 'self'",
     "font-src 'self'",
-    "connect-src 'self'",
+    `connect-src 'self'${GA ? ' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com' : ''}`,
     "frame-src 'none'",
     "form-action 'self'",
     "frame-ancestors 'none'",
