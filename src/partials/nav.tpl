@@ -4,9 +4,10 @@
       <a class="nav__logo" href="/" aria-label="Libre Studio, home"><img src="/assets/img/figma/libre-logo-light.svg" alt="" width="85" height="14"></a>
     </div>
     <nav class="nav__links" aria-label="Main">
-      <a class="nav__link" href="/#services">Services</a>
+      <a class="nav__link" href="/services/"{{current:services}}>Services</a>
       <a class="nav__link" href="/#projects">Projects</a>
       <a class="nav__link" href="/ai-design/"{{current:ai}}>AI Design</a>
+      <a class="nav__link" href="/about/"{{current:about}}>About</a>
       <a class="nav__link" href="/careers/"{{current:careers}}>Careers</a>
     </nav>
     <div class="nav__actions">
@@ -16,9 +17,10 @@
   </div>
   <div class="nav__panel" id="nav-panel" data-nav-panel>
     <ul data-stagger>
-      <li><a href="/#services">Services</a></li>
+      <li><a href="/services/"{{current:services}}>Services</a></li>
       <li><a href="/#projects">Projects</a></li>
       <li><a href="/ai-design/"{{current:ai}}>AI Design</a></li>
+      <li><a href="/about/"{{current:about}}>About</a></li>
       <li><a href="/careers/"{{current:careers}}>Careers</a></li>
       <li><a href="/careers/apply/"{{current:apply}}>Apply</a></li>
     </ul>

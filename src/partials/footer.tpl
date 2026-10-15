@@ -3,16 +3,19 @@
     <nav class="footer__links" aria-label="Footer">
       <ul>
         <li><a href="/">Homepage</a></li>
-        <li><a href="/#services">Services</a></li>
+        <li><a href="/services/">Services</a></li>
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/ai-design/">AI Design</a></li>
       </ul>
       <ul>
+        <li><a href="/ui-ux-design/">UI/UX design</a></li>
+        <li><a href="/ux-audit/">UX audit</a></li>
         <li><a href="/design-engineering/">Design engineering</a></li>
         <li><a href="/motion-design/">Motion design</a></li>
         <li><a href="/design-systems/">Design systems</a></li>
       </ul>
       <ul>
+        <li><a href="/about/">About</a></li>
         <li><a href="/careers/">Careers</a></li>
         <li><a href="/careers/apply/">Apply</a></li>
         <li><a href="mailto:{{email}}">Email</a></li>

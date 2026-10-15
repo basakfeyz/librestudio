@@ -796,3 +796,7 @@ a.proj:hover .proj__name { background-size: 100% 1.5px; }
 @media (max-width: 767px) { .stats--3 { grid-template-columns: 1fr; } }
 .svc__link { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .svc__link:hover { text-decoration-thickness: 2px; }
+.role { display: grid; gap: 16px; padding: clamp(24px, 4vw, 48px); border-radius: var(--radius-lg); background: var(--ink-5); }
+.role .prose { max-width: none; gap: 14px; }
+.role .prose h3 { margin-top: 12px; }
+.role__steps { display: grid; gap: 8px; padding-left: 1.4em; list-style: decimal; }

@@ -80,7 +80,7 @@
           <span class="proj__name">Tales AI landing page</span>
           <span class="proj__tag">CRO-focused, AI-illustrated, built in Next.js.</span>
         </a></li>
-        <li data-reveal><a class="proj" href="https://youtu.be/a6h4D_BZkbM" target="_blank" rel="noopener" aria-label="Echopod UX Audit, walkthrough on YouTube">
+        <li data-reveal><a class="proj" href="/work/echopod-ux-audit/">
           <span class="proj__cover proj__cover--echopod"><span class="proj__wordmark">Echopod<span>UX Audit</span></span></span>
           <span class="proj__name">Echopod UX Audit</span>
           <span class="proj__tag">The full audit, walked through.</span>
