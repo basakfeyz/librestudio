@@ -5,6 +5,7 @@
         <li><a href="/">Homepage</a></li>
         <li><a href="/#services">Services</a></li>
         <li><a href="/#projects">Projects</a></li>
+        <li><a href="/ai-design/">AI Design</a></li>
       </ul>
       <ul>
         <li><a href="/careers/">Careers</a></li>

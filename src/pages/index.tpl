@@ -1,4 +1,4 @@
-<!--page {"title": "Libre Studio · Product design for startups", "description": "Libre Studio is a product design studio for startups and B2B SaaS teams: UX, UI, design systems and product marketing, from messy brief to dev-ready prototype.", "path": "/", "nav": "home"} -->
+<!--page {"title": "AI-Enhanced Product Design Studio for Startups · Libre Studio", "description": "UI, UX and product design for startups, made with AI-assisted workflows and a designer in charge. Design engineering, motion and atomic design systems in Claude Code, Cursor and Figma Make.", "path": "/", "nav": "home"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -36,7 +36,7 @@
   <!-- Services: the four columns from the showreel (Growth Figma 499:535, Asset Language §4.3) -->
   <section class="scheme-light svc" id="services" aria-labelledby="services-title">
     <div class="section section--md services-head">
-      <h2 class="h2 center" id="services-title" data-split>Our Services</h2>
+      <h2 class="h2 center" id="services-title" data-split>AI-enhanced design services</h2>
     </div>
     <div class="svc__grid" data-reveal-group>
       <article class="svc__col svc__col--coral" data-reveal="bar">
@@ -45,15 +45,15 @@
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>
-        <ul class="svc__list"><li>UI audit</li><li>Website design</li><li>Web apps</li><li>Mobile app UI</li><li>Design systems</li><li>SaaS &amp; dashboards</li></ul>
+        <ul class="svc__list"><li>UI audit</li><li>Website design</li><li>Web apps</li><li>Mobile app UI</li><li>Atomic design systems</li><li>SaaS &amp; dashboards</li></ul>
       </article>
       <article class="svc__col svc__col--royal" data-reveal="bar">
         <h3 class="svc__title">Interaction, AI &amp; No-Code</h3>
-        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li>Prototyping</li><li>Developer handoff</li><li>AI design workflows</li></ul>
+        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li>Prototyping</li><li>Developer handoff</li><li>Design engineering</li><li>AI design workflows</li></ul>
       </article>
       <article class="svc__col svc__col--lime" data-reveal="bar">
         <h3 class="svc__title">Product Marketing</h3>
-        <ul class="svc__list"><li>Pitch deck</li><li>Sales deck</li><li><a class="svc__reel" href="#reel">Showreel<svg class="svc__circle" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M70 6 C 34 2, 4 10, 5 23 C 6 36, 46 42, 82 38 C 110 35, 120 24, 112 14 C 104 5, 80 3, 58 6"/></svg></a></li><li>Product explanation video</li><li>Presentation design</li><li>Motion video</li></ul>
+        <ul class="svc__list"><li>Pitch deck</li><li>Sales deck</li><li><a class="svc__reel" href="#reel">Showreel<svg class="svc__circle" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M70 6 C 34 2, 4 10, 5 23 C 6 36, 46 42, 82 38 C 110 35, 120 24, 112 14 C 104 5, 80 3, 58 6"/></svg></a></li><li>Product explanation video</li><li>Presentation design</li><li>Motion video</li><li>Motion design</li></ul>
       </article>
     </div>
   </section>
@@ -81,7 +81,7 @@
           <span class="proj__tag">The full audit, walked through.</span>
         </a></li>
         <li data-reveal><div class="proj">
-          <span class="proj__cover proj__cover--echods"><span class="proj__wordmark">Echopod<span>Design System</span></span></span>
+          <span class="proj__cover proj__cover--shot"><img class="proj__shot" src="/assets/img/projects/echopod-ds-640.webp" srcset="/assets/img/projects/echopod-ds-640.webp 640w, /assets/img/projects/echopod-ds-1280.webp 1280w" sizes="(min-width: 992px) 300px, (min-width: 600px) 45vw, 90vw" width="640" height="427" loading="lazy" alt="Echopod Studio creator analytics dashboard, built from the Echopod design system"></span>
           <span class="proj__name">Echopod Design System</span>
           <span class="proj__tag">One source of truth for mobile &amp; web apps.</span>
         </div></li>
@@ -131,7 +131,7 @@
         </details>
         <details class="faq__item" data-accordion>
           <summary class="faq__q"><span>How do you use AI?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
-          <div class="faq__a" data-accordion-body><div><p>Every day, with a designer in charge of every decision. We work in Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations, so the UI, the marketing pages, the motion and the showreels all grow from one system. AI makes the work faster. The design decisions stay human.</p></div></div>
+          <div class="faq__a" data-accordion-body><div><p>Every day, with a designer in charge of every decision. We work in Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations, so the UI, the marketing pages, the motion and the showreels all grow from one system. AI makes the work faster. The design decisions stay human. <a class="text-link" href="/ai-design/">See how we work with AI</a>.</p></div></div>
         </details>
         <details class="faq__item" data-accordion>
           <summary class="faq__q"><span>How do I start?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>

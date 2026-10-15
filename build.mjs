@@ -44,9 +44,9 @@ const STUDIO = {
   // the four service columns on the landing page, as shown there
   services: [
     { name: 'UX & Product Design', items: ['Strategy & concepting', 'UX audit', 'User research', 'A/B testing & heat mapping', 'User journeys', 'User testing'] },
-    { name: 'UI Design', items: ['UI audit', 'Website design', 'Web apps', 'Mobile app UI', 'Design systems', 'SaaS & dashboards'] },
-    { name: 'Interaction, AI & No-Code', items: ['No-code development', 'Interaction design', 'Prototyping', 'Developer handoff', 'AI design workflows'] },
-    { name: 'Product Marketing', items: ['Pitch deck', 'Sales deck', 'Showreel', 'Product explanation video', 'Presentation design', 'Motion video'] },
+    { name: 'UI Design', items: ['UI audit', 'Website design', 'Web apps', 'Mobile app UI', 'Atomic design systems', 'SaaS & dashboards'] },
+    { name: 'Interaction, AI & No-Code', items: ['No-code development', 'Interaction design', 'Prototyping', 'Developer handoff', 'Design engineering', 'AI design workflows'] },
+    { name: 'Product Marketing', items: ['Pitch deck', 'Sales deck', 'Showreel', 'Product explanation video', 'Presentation design', 'Motion video', 'Motion design'] },
   ],
   // the four cards in Projects; role ruled by Başak: end-to-end UI/UX design. The apps are clients' products,
   // so they are plain Things with their App Store link, not SoftwareApplication (that would claim we sell them).
@@ -84,7 +84,7 @@ function jsonLd(meta, vars, html) {
   ];
   if (meta.path === '/') {
     org.hasOfferCatalog = {
-      '@type': 'OfferCatalog', name: 'Our Services',
+      '@type': 'OfferCatalog', name: 'AI-enhanced design services',
       itemListElement: STUDIO.services.map((sv) => ({ '@type': 'OfferCatalog', name: sv.name, itemListElement: sv.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name, provider: { '@id': `${O}/#organization` } } })) })),
     };
     graph.push({ '@type': 'VideoObject', '@id': `${O}/#showreel`, name: STUDIO.reel.name, description: STUDIO.reel.description, duration: STUDIO.reel.duration, uploadDate: STUDIO.reel.uploadDate, contentUrl: O + STUDIO.reel.contentUrl, thumbnailUrl: O + STUDIO.reel.thumbnailUrl, publisher: { '@id': `${O}/#organization` } });
@@ -100,7 +100,7 @@ function jsonLd(meta, vars, html) {
 
 function llmsTxt(pages) {
   const line = (p) => `- [${p.title.replace(/ · Libre Studio$/, '')}](${SITE.origin}${p.path}): ${p.description}`;
-  const main = pages.filter((p) => ['/', '/careers/', '/careers/apply/'].includes(p.path));
+  const main = pages.filter((p) => ['/', '/ai-design/', '/careers/', '/careers/apply/'].includes(p.path));
   const legal = pages.filter((p) => !main.includes(p));
   return `# Libre Studio
 

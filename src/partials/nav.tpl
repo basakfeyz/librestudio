@@ -6,6 +6,7 @@
     <nav class="nav__links" aria-label="Main">
       <a class="nav__link" href="/#services">Services</a>
       <a class="nav__link" href="/#projects">Projects</a>
+      <a class="nav__link" href="/ai-design/"{{current:ai}}>AI Design</a>
       <a class="nav__link" href="/careers/"{{current:careers}}>Careers</a>
     </nav>
     <div class="nav__actions">
@@ -17,6 +18,7 @@
     <ul data-stagger>
       <li><a href="/#services">Services</a></li>
       <li><a href="/#projects">Projects</a></li>
+      <li><a href="/ai-design/"{{current:ai}}>AI Design</a></li>
       <li><a href="/careers/"{{current:careers}}>Careers</a></li>
       <li><a href="/careers/apply/"{{current:apply}}>Apply</a></li>
     </ul>
