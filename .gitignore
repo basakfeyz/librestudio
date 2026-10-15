@@ -1,0 +1,8 @@
+# build output (Netlify builds it)
+dist/
+# private working notes and review captures
+NOTES.private.md
+review/
+.claude/
+.DS_Store
+node_modules/
