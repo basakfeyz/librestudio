@@ -37,7 +37,12 @@
         <h2 class="h2" id="clients-title" data-split>What have we worked on?</h2>
         <div class="text-lg prose" data-reveal>
           <p>Mostly startups in the UK and the US: AI-native consumer apps, B2B SaaS, dashboards and websites. Başak spent a year with the C-level team of a logistics SaaS company, designing three web products.</p>
-          <p>Recent work includes <a class="text-link" href="/work/lula/">Lula</a>, an AI bedtime-story app, and <a class="text-link" href="/work/mona-ai/">MONA AI</a>, a photo and video studio app. Both are on the App Store. Earlier projects include Nyuk.in, a fintech app, and Whiteglasses, a sentiment-analysis dashboard.</p>
+          <a class="upwork-card" href="https://www.upwork.com/freelancers/basakf" target="_blank" rel="noopener">
+            <span class="upwork-card__badge">Top Rated on Upwork</span>
+            <span class="upwork-card__name">Başak Feyzioğlu</span>
+            <span class="upwork-card__text">Client reviews, past projects and work history on Başak's Upwork profile.</span>
+            <span class="upwork-card__cta">View the Upwork profile <span aria-hidden="true">↗</span></span>
+          </a>
         </div>
       </div>
     </div>

@@ -76,7 +76,7 @@ function jsonLd(meta, vars, html) {
     '@type': 'Organization', '@id': `${O}/#organization`, name: 'Libre Studio', url: `${O}/`,
     logo: { '@type': 'ImageObject', url: `${O}/assets/img/apple-touch-icon.png`, width: 180, height: 180 },
     image: `${O}/assets/img/og.jpg`, email: SITE.email, description: STUDIO.description, foundingDate: STUDIO.foundingDate,
-    founder: { '@type': 'Person', '@id': `${O}/#founder`, name: STUDIO.founder, jobTitle: 'Founder and product designer', url: `${O}/about/`, sameAs: ['https://www.linkedin.com/in/basakfeyzioglu/'], alumniOf: { '@type': 'CollegeOrUniversity', name: 'Koç University' } },
+    founder: { '@type': 'Person', '@id': `${O}/#founder`, name: STUDIO.founder, jobTitle: 'Founder and product designer', url: `${O}/about/`, sameAs: ['https://www.linkedin.com/in/basakfeyzioglu/', 'https://www.upwork.com/freelancers/basakf'], alumniOf: { '@type': 'CollegeOrUniversity', name: 'Koç University' } },
     address: { '@type': 'PostalAddress', addressLocality: 'Istanbul', addressCountry: 'TR' },
     areaServed: 'Worldwide', knowsAbout: STUDIO.knowsAbout,
   };

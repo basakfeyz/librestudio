@@ -800,3 +800,9 @@ a.proj:hover .proj__name { background-size: 100% 1.5px; }
 .role .prose { max-width: none; gap: 14px; }
 .role .prose h3 { margin-top: 12px; }
 .role__steps { display: grid; gap: 8px; padding-left: 1.4em; list-style: decimal; }
+.upwork-card { display: grid; gap: 6px; padding: 24px 28px; border-radius: var(--radius-lg); background: var(--ink); color: var(--white); text-decoration: none; max-width: 30rem; transition: transform 300ms var(--ease-out); }
+.upwork-card:hover { transform: translateY(-2px); }
+.upwork-card__badge { justify-self: start; padding: 4px 10px; border-radius: 999px; background: var(--lime); color: var(--ink); font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.upwork-card__name { color: var(--white); margin-top: 8px; font-family: var(--font-head); font-size: var(--h5); font-weight: 500; font-variation-settings: "opsz" 14; }
+.upwork-card__text { font-size: var(--text-sm); color: var(--white-70); }
+.upwork-card__cta { margin-top: 8px; font-weight: 600; color: var(--lime); }
