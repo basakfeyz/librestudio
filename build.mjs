@@ -51,8 +51,9 @@ const STUDIO = {
   // the four cards in Projects; role ruled by Başak: end-to-end UI/UX design. The apps are clients' products,
   // so they are plain Things with their App Store link, not SoftwareApplication (that would claim we sell them).
   projects: [
-    { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', about: { '@type': 'Thing', name: 'Lula: AI Bedtime Stories', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
-    { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design', about: { '@type': 'Thing', name: 'MONA AI: Photo & Video Studio', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
+    { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', url: '/work/lula/', about: { '@type': 'Thing', name: 'Lula: AI Bedtime Stories', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
+    { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design and motion', url: '/work/mona-ai/', about: { '@type': 'Thing', name: 'MONA AI: Photo & Video Studio', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
+    { name: 'Tales AI landing page', tag: 'A CRO-focused waitlist page with AI-generated illustration, built in Next.js.', role: 'Landing page design and front-end build', url: '/work/tales-ai-landing/', about: { '@type': 'Thing', name: 'tales-ai-landingpage on GitHub', url: 'https://github.com/basakfeyz/tales-ai-landingpage' } },
     { name: 'Echopod UX Audit', tag: 'The full audit, walked through.', role: 'UX audit', url: 'https://youtu.be/a6h4D_BZkbM' },
     { name: 'Echopod Design System', tag: 'One source of truth for mobile & web apps.', role: 'Design system' },
   ],
@@ -90,7 +91,7 @@ function jsonLd(meta, vars, html) {
     graph.push({ '@type': 'VideoObject', '@id': `${O}/#showreel`, name: STUDIO.reel.name, description: STUDIO.reel.description, duration: STUDIO.reel.duration, uploadDate: STUDIO.reel.uploadDate, contentUrl: O + STUDIO.reel.contentUrl, thumbnailUrl: O + STUDIO.reel.thumbnailUrl, publisher: { '@id': `${O}/#organization` } });
     graph.push({
       '@type': 'ItemList', '@id': `${O}/#projects`, name: 'Projects',
-      itemListElement: STUDIO.projects.map((pr, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'CreativeWork', name: pr.name, description: `${pr.role} by Libre Studio. ${pr.tag}`, creator: { '@id': `${O}/#organization` }, ...(pr.url ? { url: pr.url } : {}), ...(pr.about ? { about: pr.about } : {}) } })),
+      itemListElement: STUDIO.projects.map((pr, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'CreativeWork', name: pr.name, description: `${pr.role} by Libre Studio. ${pr.tag}`, creator: { '@id': `${O}/#organization` }, ...(pr.url ? { url: pr.url.startsWith('/') ? O + pr.url : pr.url } : {}), ...(pr.about ? { about: pr.about } : {}) } })),
     });
   }
   const faq = faqFrom(html);
@@ -100,17 +101,18 @@ function jsonLd(meta, vars, html) {
 
 function llmsTxt(pages) {
   const line = (p) => `- [${p.title.replace(/ · Libre Studio$/, '')}](${SITE.origin}${p.path}): ${p.description}`;
-  const main = pages.filter((p) => ['/', '/ai-design/', '/careers/', '/careers/apply/'].includes(p.path));
+  const LEGAL = ['/privacy/', '/kvkk-aday/', '/acik-riza/', '/kvkk-basvuru/', '/cookies/', '/cerez-politikasi/'];
+  const main = pages.filter((p) => !LEGAL.includes(p.path));
   const legal = pages.filter((p) => !main.includes(p));
   return `# Libre Studio
 
 > ${STUDIO.description}
 
-Libre Studio designs web apps, mobile apps, websites and design systems for startups, and the launch material around them: pitch decks, showreels and product videos. AI is used every day, with a designer in charge of every decision; the studio works in Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations, so the UI, the marketing pages, the motion and the showreels grow from one system.
+Libre Studio designs and builds web apps, mobile apps, websites and atomic design systems for startups, and the launch material around them: pitch decks, showreels and product videos. AI is used every day, with a designer in charge of every decision; the studio works in Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations, so the UI, the marketing pages, the motion and the showreels grow from one system.
 
 Services: ${STUDIO.services.map((sv) => `${sv.name} (${sv.items.join(', ')})`).join('; ')}.
 
-Projects: ${STUDIO.projects.map((pr) => `${pr.name}, ${(/^[A-Z][a-z]/.test(pr.role) ? pr.role.charAt(0).toLowerCase() + pr.role.slice(1) : pr.role)}${pr.about ? ` (${pr.about.url})` : pr.url ? ` (${pr.url})` : ''}`).join('; ')}.
+Projects: ${STUDIO.projects.map((pr) => `${pr.name}, ${(/^[A-Z][a-z]/.test(pr.role) ? pr.role.charAt(0).toLowerCase() + pr.role.slice(1) : pr.role)}${pr.url ? ` (${pr.url.startsWith('/') ? SITE.origin + pr.url : pr.url})` : pr.about ? ` (${pr.about.url})` : ''}`).join('; ')}.
 
 Contact: ${SITE.email}. Book a call: ${SITE.calendar}
 

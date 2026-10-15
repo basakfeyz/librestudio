@@ -45,15 +45,15 @@
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>
-        <ul class="svc__list"><li>UI audit</li><li>Website design</li><li>Web apps</li><li>Mobile app UI</li><li>Atomic design systems</li><li>SaaS &amp; dashboards</li></ul>
+        <ul class="svc__list"><li>UI audit</li><li>Website design</li><li>Web apps</li><li>Mobile app UI</li><li><a class="svc__link" href="/design-systems/">Atomic design systems</a></li><li>SaaS &amp; dashboards</li></ul>
       </article>
       <article class="svc__col svc__col--royal" data-reveal="bar">
         <h3 class="svc__title">Interaction, AI &amp; No-Code</h3>
-        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li>Prototyping</li><li>Developer handoff</li><li>Design engineering</li><li>AI design workflows</li></ul>
+        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li>Prototyping</li><li>Developer handoff</li><li><a class="svc__link" href="/design-engineering/">Design engineering</a></li><li><a class="svc__link" href="/ai-design/">AI design workflows</a></li></ul>
       </article>
       <article class="svc__col svc__col--lime" data-reveal="bar">
         <h3 class="svc__title">Product Marketing</h3>
-        <ul class="svc__list"><li>Pitch deck</li><li>Sales deck</li><li><a class="svc__reel" href="#reel">Showreel<svg class="svc__circle" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M70 6 C 34 2, 4 10, 5 23 C 6 36, 46 42, 82 38 C 110 35, 120 24, 112 14 C 104 5, 80 3, 58 6"/></svg></a></li><li>Product explanation video</li><li>Presentation design</li><li>Motion video</li><li>Motion design</li></ul>
+        <ul class="svc__list"><li>Pitch deck</li><li>Sales deck</li><li><a class="svc__reel" href="#reel">Showreel<svg class="svc__circle" viewBox="0 0 120 44" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M70 6 C 34 2, 4 10, 5 23 C 6 36, 46 42, 82 38 C 110 35, 120 24, 112 14 C 104 5, 80 3, 58 6"/></svg></a></li><li>Product explanation video</li><li>Presentation design</li><li>Motion video</li><li><a class="svc__link" href="/motion-design/">Motion design</a></li></ul>
       </article>
     </div>
   </section>
@@ -65,15 +65,20 @@
         <h2 class="h2" id="projects-title" data-split>Projects</h2>
       </div>
       <ul class="proj__grid" data-reveal-group>
-        <li data-reveal><a class="proj" href="https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640" target="_blank" rel="noopener" aria-label="Lula: AI Bedtime Stories, on the App Store">
+        <li data-reveal><a class="proj" href="/work/lula/">
           <span class="proj__cover proj__cover--lula"><img class="proj__icon" src="/assets/img/projects/lula-icon.webp" width="128" height="128" alt=""></span>
           <span class="proj__name">Lula: AI Bedtime Stories</span>
           <span class="proj__tag">A new story, every night.</span>
         </a></li>
-        <li data-reveal><a class="proj" href="https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447" target="_blank" rel="noopener" aria-label="MONA AI: Photo &amp; Video Studio, on the App Store">
+        <li data-reveal><a class="proj" href="/work/mona-ai/">
           <span class="proj__cover proj__cover--mona"><img class="proj__icon" src="/assets/img/projects/mona-icon.webp" width="128" height="128" alt=""></span>
           <span class="proj__name">MONA AI: Photo &amp; Video Studio</span>
           <span class="proj__tag">Your face, 500+ styles.</span>
+        </a></li>
+        <li data-reveal><a class="proj" href="/work/tales-ai-landing/">
+          <span class="proj__cover proj__cover--shot"><img class="proj__shot" src="/assets/img/work/tales/hero-960.webp" width="960" height="600" alt="" loading="lazy"></span>
+          <span class="proj__name">Tales AI landing page</span>
+          <span class="proj__tag">CRO-focused, AI-illustrated, built in Next.js.</span>
         </a></li>
         <li data-reveal><a class="proj" href="https://youtu.be/a6h4D_BZkbM" target="_blank" rel="noopener" aria-label="Echopod UX Audit, walkthrough on YouTube">
           <span class="proj__cover proj__cover--echopod"><span class="proj__wordmark">Echopod<span>UX Audit</span></span></span>
