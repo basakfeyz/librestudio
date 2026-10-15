@@ -37,6 +37,8 @@
           <p class="eyebrow">Build the system</p>
           <dl>
             <dt><a class="text-link" href="/design-systems/">Design systems</a></dt><dd>Tokens and components named the same in Figma and code.</dd>
+            <dt><a class="text-link" href="/work/tales-ai-landing/">AI imagery and illustration</a></dt><dd>AI-generated illustration art-directed into one consistent world, with Nano Banana.</dd>
+            <dt><a class="text-link" href="/work/lula/">Mascot design</a></dt><dd>Characters like Luna, kept on-model across every pose and scene.</dd>
           </dl>
         </div>
         <div class="tools__group" data-reveal>
@@ -44,6 +46,7 @@
           <dl>
             <dt><a class="text-link" href="/design-engineering/">Design engineering</a></dt><dd>Designs that arrive as working front ends your developers can use.</dd>
             <dt><a class="text-link" href="/motion-design/">Motion design</a></dt><dd>Showreels, product videos and UI motion on motion tokens.</dd>
+            <dt><a class="text-link" href="/work/librestudio-website/">SEO and GEO</a></dt><dd>Sites built to be found by Google and quoted by AI answers: structured data, llms.txt, IndexNow.</dd>
           </dl>
         </div>
         <div class="tools__group" data-reveal>
@@ -67,7 +70,7 @@
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>
-        <ul class="svc__list"><li>UI audit</li><li>Website design</li><li><a class="svc__link" href="/ui-ux-design/">Web apps</a></li><li><a class="svc__link" href="/ui-ux-design/">Mobile app UI</a></li><li><a class="svc__link" href="/design-systems/">Atomic design systems</a></li><li>SaaS &amp; dashboards</li></ul>
+        <ul class="svc__list"><li>UI audit</li><li>Website design</li><li><a class="svc__link" href="/ui-ux-design/">Web apps</a></li><li><a class="svc__link" href="/ui-ux-design/">Mobile app UI</a></li><li><a class="svc__link" href="/design-systems/">Atomic design systems</a></li><li>SaaS &amp; dashboards</li><li><a class="svc__link" href="/work/librestudio-website/">SEO &amp; GEO</a></li></ul>
       </article>
       <article class="svc__col svc__col--royal" data-reveal="bar">
         <h3 class="svc__title">Interaction, AI &amp; No-Code</h3>
@@ -75,7 +78,7 @@
       </article>
       <article class="svc__col svc__col--lime" data-reveal="bar">
         <h3 class="svc__title">Product Marketing</h3>
-        <ul class="svc__list"><li>Pitch deck</li><li>Sales deck</li><li><a class="svc__link" href="/#reel">Showreel</a></li><li>Product explanation video</li><li>Presentation design</li><li>Motion video</li><li><a class="svc__link" href="/motion-design/">Motion design</a></li></ul>
+        <ul class="svc__list"><li>Pitch deck</li><li>Sales deck</li><li><a class="svc__link" href="/#reel">Showreel</a></li><li>Product explanation video</li><li>Presentation design</li><li>Motion video</li><li><a class="svc__link" href="/motion-design/">Motion design</a></li><li><a class="svc__link" href="/work/tales-ai-landing/">AI imagery &amp; illustration</a></li><li><a class="svc__link" href="/work/lula/">Mascot design</a></li></ul>
       </article>
     </div>
   </section>

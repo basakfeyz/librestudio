@@ -41,13 +41,13 @@ const STUDIO = {
   description: 'Libre Studio is a remote product design studio for startups. End-to-end UI, UX and product design, design engineering and motion design, made with AI-assisted workflows and a human in the loop. Atomic design foundations let the product, the marketing and the motion scale from one system. Founded by Başak Feyzioğlu. Based in Istanbul, working worldwide.',
   founder: 'Başak Feyzioğlu',
   foundingDate: '2023',
-  knowsAbout: ['UI design', 'UX design', 'Product design', 'Design engineering', 'Motion design', 'Design systems', 'Atomic design', 'AI-assisted design', 'AI-enhanced design', 'Claude Code', 'Cursor', 'Figma Make', 'Claude Design', 'Pitch decks', 'Showreels'],
+  knowsAbout: ['UI design', 'UX design', 'Product design', 'Design engineering', 'Motion design', 'Design systems', 'Atomic design', 'AI-assisted design', 'AI-enhanced design', 'Claude Code', 'Cursor', 'Figma Make', 'Claude Design', 'Pitch decks', 'Showreels', 'AI imagery', 'Illustration', 'Mascot design', 'SEO', 'Generative engine optimisation (GEO)'],
   // the four service columns on the landing page, as shown there
   services: [
     { name: 'UX & Product Design', items: ['Strategy & concepting', 'UX audit', 'User research', 'A/B testing & heat mapping', 'User journeys', 'User testing'] },
-    { name: 'UI Design', items: ['UI audit', 'Website design', 'Web apps', 'Mobile app UI', 'Atomic design systems', 'SaaS & dashboards'] },
+    { name: 'UI Design', items: ['UI audit', 'Website design', 'Web apps', 'Mobile app UI', 'Atomic design systems', 'SaaS & dashboards', 'SEO & GEO'] },
     { name: 'Interaction, AI & No-Code', items: ['No-code development', 'Interaction design', 'Prototyping', 'Developer handoff', 'Design engineering', 'AI design workflows'] },
-    { name: 'Product Marketing', items: ['Pitch deck', 'Sales deck', 'Showreel', 'Product explanation video', 'Presentation design', 'Motion video', 'Motion design'] },
+    { name: 'Product Marketing', items: ['Pitch deck', 'Sales deck', 'Showreel', 'Product explanation video', 'Presentation design', 'Motion video', 'Motion design', 'AI imagery & illustration', 'Mascot design'] },
   ],
   // the four cards in Projects; role ruled by Başak: end-to-end UI/UX design. The apps are clients' products,
   // so they are plain Things with their App Store link, not SoftwareApplication (that would claim we sell them).
@@ -55,6 +55,7 @@ const STUDIO = {
     { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', url: '/work/lula/', about: { '@type': 'Thing', name: 'Lula: AI Bedtime Stories', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
     { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design and motion', url: '/work/mona-ai/', about: { '@type': 'Thing', name: 'MONA AI: Photo & Video Studio', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
     { name: 'Tales AI landing page', tag: 'A CRO-focused waitlist page illustrated with Nano Banana, built in Next.js.', role: 'Landing page design and front-end build', url: '/work/tales-ai-landing/', about: { '@type': 'Thing', name: 'tales-ai-landingpage on GitHub', url: 'https://github.com/basakfeyz/tales-ai-landingpage' } },
+    { name: 'Libre Studio website', tag: 'Designed, built and set up for SEO and GEO.', role: 'Website design, build, SEO and GEO', url: '/work/librestudio-website/' },
     { name: 'Echopod UX Audit', tag: 'The full audit, walked through.', role: 'UX audit', url: '/work/echopod-ux-audit/' },
     { name: 'Echopod Design System', tag: 'One source of truth for mobile & web apps.', role: 'Design system' },
   ],
