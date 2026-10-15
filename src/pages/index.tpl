@@ -177,7 +177,7 @@
 
 <dialog class="lightbox" data-lightbox aria-label="Showreel 2026">
   <div class="lightbox__frame">
-    <video class="lightbox__video" controls playsinline preload="none" poster="/assets/video/showreel-poster-1280.jpg">
+    <video class="lightbox__video" controls playsinline preload="none" poster="/assets/video/showreel-loop-poster.webp">
       <source src="/assets/video/showreel-720.mp4" type="video/mp4" media="(max-width: 767px)">
       <source src="/assets/video/showreel-1080.mp4" type="video/mp4">
       <p>Your browser can't play this video here. <a href="/assets/video/showreel-1080.mp4">Download the showreel</a> (17 MB).</p>

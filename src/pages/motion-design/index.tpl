@@ -8,7 +8,7 @@
       <div class="hero__copy">
         <div class="stack">
           <p class="eyebrow" data-reveal>Motion design</p>
-          <h1 class="h1" id="md-title" data-split>Motion with a <span class="mark">job<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
+          <h1 class="h1" id="md-title" data-split>Motion design with a <span class="mark">job<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
           <p class="text-lg" data-reveal>Showreels, product videos, app animations and interface motion for startups. Every movement reveals, guides or emphasises something. Nothing moves just to move.</p>
         </div>
         <div class="actions actions--center" data-reveal>
@@ -91,6 +91,6 @@
     </div>
   </section>
 
-  {{> work-next}}
+  {{> work-next-motion}}
 </main>
 {{> footer}}

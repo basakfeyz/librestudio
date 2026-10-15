@@ -40,6 +40,7 @@ const CRAWLERS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-Sear
 const STUDIO = {
   description: 'Libre Studio is a remote product design studio for startups. End-to-end UI, UX and product design, design engineering and motion design, made with AI-assisted workflows and a human in the loop. Atomic design foundations let the product, the marketing and the motion scale from one system. Founded by Başak Feyzioğlu. Based in Istanbul, working worldwide.',
   founder: 'Başak Feyzioğlu',
+  foundingDate: '2023',
   knowsAbout: ['UI design', 'UX design', 'Product design', 'Design engineering', 'Motion design', 'Design systems', 'Atomic design', 'AI-assisted design', 'AI-enhanced design', 'Claude Code', 'Cursor', 'Figma Make', 'Claude Design', 'Pitch decks', 'Showreels'],
   // the four service columns on the landing page, as shown there
   services: [
@@ -57,7 +58,7 @@ const STUDIO = {
     { name: 'Echopod UX Audit', tag: 'The full audit, walked through.', role: 'UX audit', url: '/work/echopod-ux-audit/' },
     { name: 'Echopod Design System', tag: 'One source of truth for mobile & web apps.', role: 'Design system' },
   ],
-  reel: { name: 'Libre Studio showreel', description: 'The Libre Studio showreel: UX and product design, UI design, interaction, AI and no-code, and product marketing work for startups.', duration: 'PT1M24S', uploadDate: '2026-10-15T00:00:00+03:00', contentUrl: '/assets/video/showreel-1080.mp4', thumbnailUrl: '/assets/video/showreel-poster-1280.jpg' },
+  reel: { name: 'Libre Studio showreel', description: 'The Libre Studio showreel: UX and product design, UI design, interaction, AI and no-code, and product marketing work for startups.', duration: 'PT1M24S', uploadDate: '2026-10-15T00:00:00+03:00', contentUrl: '/assets/video/showreel-1080.mp4', thumbnailUrl: '/assets/video/showreel-loop-poster.webp' },
 };
 
 const decode = (t) => t.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#39;|&rsquo;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
@@ -73,7 +74,7 @@ function jsonLd(meta, vars, html) {
   const org = {
     '@type': 'Organization', '@id': `${O}/#organization`, name: 'Libre Studio', url: `${O}/`,
     logo: { '@type': 'ImageObject', url: `${O}/assets/img/apple-touch-icon.png`, width: 180, height: 180 },
-    image: `${O}/assets/img/og.jpg`, email: SITE.email, description: STUDIO.description,
+    image: `${O}/assets/img/og.jpg`, email: SITE.email, description: STUDIO.description, foundingDate: STUDIO.foundingDate,
     founder: { '@type': 'Person', '@id': `${O}/#founder`, name: STUDIO.founder, jobTitle: 'Founder and product designer', url: `${O}/about/`, sameAs: ['https://www.linkedin.com/in/basakfeyzioglu/'], alumniOf: { '@type': 'CollegeOrUniversity', name: 'Koç University' } },
     address: { '@type': 'PostalAddress', addressLocality: 'Istanbul', addressCountry: 'TR' },
     areaServed: 'Worldwide', knowsAbout: STUDIO.knowsAbout,

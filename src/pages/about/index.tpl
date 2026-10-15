@@ -16,6 +16,8 @@
         <div><dt>Founder</dt><dd>Başak Feyzioğlu</dd></div>
         <div><dt>Based in</dt><dd>Istanbul, working worldwide</dd></div>
         <div><dt>Designing since</dt><dd>2020</dd></div>
+        <div><dt>Studio since</dt><dd>2023</dd></div>
+        <div><dt>On Upwork</dt><dd>Top Rated</dd></div>
         <div><dt>Clients</dt><dd>Startups, mainly in the UK and US</dd></div>
       </dl>
     </div>
@@ -26,7 +28,7 @@
       <div class="ai-def">
         <h2 class="h2" id="founder-title" data-split>Who is Başak Feyzioğlu?</h2>
         <div class="text-lg prose" data-reveal>
-          <p>Başak Feyzioğlu founded Libre Studio. She is a product designer who has designed web and mobile products since 2020, for more than 10 clients in more than 10 countries.</p>
+          <p>Başak Feyzioğlu founded Libre Studio in 2023. She is a Top Rated product designer on Upwork who has designed web and mobile products since 2020, for more than 10 clients in more than 10 countries.</p>
           <p>She came to design from law. She studied law at Koç University in Istanbul, then worked in M&amp;A and as an attorney until 2019. In 2020 she joined Pensa Systems as a business data analyst, preparing data for a computer-vision AI used in retail. The same year she co-authored <em>Data Protection Laws and Regulations in Turkey</em> for ICLG, comparing Turkish law with GDPR. That was her first work in AI, and her first published writing on data rights.</p>
           <p>She taught herself design through courses and real projects: a diploma from the UX Design Institute, graphic design training from CalArts, and generative AI certificates from Vanderbilt University. You can find her on <a class="text-link" href="https://www.linkedin.com/in/basakfeyzioglu/" target="_blank" rel="noopener">LinkedIn</a>.</p>
         </div>
