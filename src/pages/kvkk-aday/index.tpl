@@ -98,7 +98,7 @@
             <ul>
               <li><strong>Barındırma:</strong> librestudio.co, Netlify, Inc. (ABD) altyapısında barındırılmaktadır. Netlify, siteyi sunmak ve kötüye kullanıma karşı korumak için IP adresi gibi teknik verileri işler.</li>
               <li><strong>Başvuru formu:</strong> Başvuru formumuz ClickUp (Mango Technologies, Inc., ABD) üzerinde barındırılır; librestudio.co/careers/apply sayfasındaki düğme formu ClickUp'ın kendi sitesinde açar. Formla gönderdiğiniz yanıtlar ve dosyalar doğrudan ClickUp çalışma alanımıza kaydedilir; bu sitede veya Netlify'da saklanmaz.</li>
-              <li><strong>Çerezler:</strong> Sitenin kendisi çerez kullanmaz ve üçüncü taraf içerik yüklemez. Form ClickUp'ın sitesinde açıldığında ClickUp ve iş ortakları orada kendi çerezlerini kullanabilir. Ayrıntılar: <a href="/cerez-politikasi/">Çerez Aydınlatma Metni</a>.</li>
+              <li><strong>Çerezler:</strong> Site, analiz çerezlerini kabul etmediğiniz sürece çerez kullanmaz. Açık rızanızla Google Analytics 4, sitenin nasıl kullanıldığını ölçer. Form ClickUp'ın sitesinde açıldığında ClickUp ve iş ortakları orada kendi çerezlerini kullanabilir. Ayrıntılar ve tercihinizi nasıl değiştireceğiniz: <a href="/cerez-politikasi/">Çerez Aydınlatma Metni</a>.</li>
               <li><strong>Formsuz başvuru:</strong> Formu kullanmak istemezseniz portföyünüzü <a href="mailto:{{email}}">{{email}}</a> adresine gönderebilirsiniz; başvurunuz aynı şekilde değerlendirilir.</li>
               <li><strong>Metin sürümü:</strong> Bu metnin sürüm tarihi {{notice_version}}'dir. Metin değiştiğinde tarih güncellenir.</li>
             </ul>

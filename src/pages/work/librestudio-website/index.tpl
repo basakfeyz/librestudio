@@ -1,4 +1,4 @@
-<!--page {"title": "Libre Studio Website: Design, SEO and GEO · Libre Studio", "description": "How we designed and built librestudio.co in plain HTML with Claude Code, with zero third-party requests, and SEO and GEO for Google and AI answers.", "path": "/work/librestudio-website/", "nav": "work"} -->
+<!--page {"title": "Libre Studio Website: Design, SEO and GEO · Libre Studio", "description": "How we designed and built librestudio.co in plain HTML with Claude Code, with analytics only after opt-in consent, and SEO and GEO for Google and AI answers.", "path": "/work/librestudio-website/", "nav": "work"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -46,7 +46,7 @@
             <li><strong>One design system, Figma to code.</strong> Colours, type, spacing and radius come straight from the Figma variables. Where a colour pair failed WCAG AA contrast, we changed it.</li>
             <li><strong>Motion with a job.</strong> Headlines rise word by word, one hand-drawn mark draws on per page, service columns rise like bars. With reduced motion on, everything simply appears.</li>
             <li><strong>A light showreel.</strong> A 145 MB master became a 2.9 MB silent loop for the hero, with the full version loading only when someone presses play.</li>
-            <li><strong>Private by default.</strong> Self-hosted fonts and video, no analytics, no cookies, and a strict content security policy. Privacy notices in English and Turkish under KVKK.</li>
+            <li><strong>Private by default.</strong> Self-hosted fonts and video, analytics only after opt-in consent, no cookies before it, and a strict content security policy. Privacy notices in English and Turkish under KVKK.</li>
             <li><strong>A build that refuses mistakes.</strong> A short Node script assembles the pages and fails on any broken internal link or anchor, so a typo can never go live.</li>
           </ul>
         </div>
@@ -60,7 +60,7 @@
         <h2 class="h2" id="numbers-title" data-split>The site in numbers</h2>
       </div>
       <div class="stats" data-reveal-group>
-        <div class="stat" data-reveal><span class="stat__num">0</span><p>third-party requests, so no visitor data leaves the site</p></div>
+        <div class="stat" data-reveal><span class="stat__num">0</span><p>third-party requests until you accept analytics</p></div>
         <div class="stat" data-reveal><span class="stat__num">0</span><p>frameworks or dependencies to maintain</p></div>
         <div class="stat" data-reveal><span class="stat__num">2.9 MB</span><p>hero showreel loop, down from a 145 MB master</p></div>
         <div class="stat" data-reveal><span class="stat__num">22</span><p>pages, each with its own structured data</p></div>

@@ -106,7 +106,7 @@
             <ul>
               <li><strong>Hosting:</strong> librestudio.co is hosted by Netlify, Inc. (USA). To deliver the site and protect it from abuse, Netlify processes technical data such as IP addresses.</li>
               <li><strong>Application form:</strong> our application form is hosted by ClickUp (Mango Technologies, Inc., USA); the button at librestudio.co/careers/apply opens it on ClickUp's own site. Your answers and files go straight into our ClickUp workspace; they are not stored on this website or at Netlify.</li>
-              <li><strong>Cookies:</strong> the site itself sets no cookies and loads no third-party content. When the form opens on ClickUp's site, ClickUp and its partners may set their own cookies there. Details: <a href="/cookies/">Cookie Notice</a>.</li>
+              <li><strong>Cookies:</strong> the site sets no cookies unless you accept analytics. With your consent, Google Analytics 4 measures how the site is used. When the form opens on ClickUp's site, ClickUp and its partners may set their own cookies there. Details, and how to change your choice: <a href="/cookies/">Cookie Notice</a>.</li>
               <li><strong>Applying without the form:</strong> if you would rather not use the form, email your portfolio to <a href="mailto:{{email}}">{{email}}</a>; your application is assessed the same way.</li>
               <li><strong>Version:</strong> this notice is dated {{notice_version}}. The date changes whenever the text changes.</li>
             </ul>

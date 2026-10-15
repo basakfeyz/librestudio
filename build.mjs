@@ -158,16 +158,24 @@ const EARLY_JS = "document.documentElement.classList.add('js');setTimeout(functi
 const GA = /^G-[A-Z0-9]{6,12}$/.test(SITE.ga_id) ? SITE.ga_id : '';
 if (SITE.ga_id && !GA) throw new Error('ga_id must look like G-XXXXXXXXXX');
 const GA_META = GA ? `<meta name="ga-id" content="${GA}">` : '';
-const CONSENT_BANNER = GA ? `<div class="consent" role="region" aria-label="Cookie consent" data-consent hidden>
+const CONSENT_TEXT = {
+  en: { label: 'Cookie consent', text: 'With your consent, we use Google Analytics (Google LLC, USA) to see which pages help people. It sets cookies and sends usage data to the USA. Nothing loads until you choose.', notice: '<a class="text-link" href="/cookies/">Cookie Notice</a>', decline: 'Decline', accept: 'Accept', settings: 'Cookie settings' },
+  tr: { label: 'Çerez onayı', text: 'Açık rızanızla, hangi sayfaların işe yaradığını görmek için Google Analytics (Google LLC, ABD) kullanırız. Çerez yazar ve kullanım verilerini ABD\'ye aktarır. Siz seçim yapana kadar hiçbir şey yüklenmez.', notice: '<a class="text-link" href="/cerez-politikasi/">Çerez Aydınlatma Metni</a>', decline: 'Reddet', accept: 'Kabul et', settings: 'Çerez ayarları' },
+};
+const consentBanner = (lang) => {
+  if (!GA) return '';
+  const t = CONSENT_TEXT[lang] || CONSENT_TEXT.en;
+  return `<div class="consent" role="region" aria-label="${t.label}" lang="${lang === 'tr' ? 'tr' : 'en'}" data-consent hidden>
   <div class="consent__inner">
-    <p class="consent__text">We use Google Analytics to see which pages help people, only if you accept. No cookies are set until you choose. <a class="text-link" href="/cookies/">Cookie Notice</a> · <a class="text-link" href="/cerez-politikasi/" lang="tr">Çerez Aydınlatma Metni</a></p>
+    <p class="consent__text">${t.text} ${t.notice}</p>
     <div class="consent__actions">
-      <button type="button" class="btn btn--ghost-dark btn--sm" data-consent-choice="denied"><span class="btn__label"><span data-text="Decline">Decline</span></span></button>
-      <button type="button" class="btn btn--lime btn--sm" data-consent-choice="granted"><span class="btn__label"><span data-text="Accept">Accept</span></span></button>
+      <button type="button" class="btn btn--lime btn--sm" data-consent-choice="denied"><span class="btn__label"><span data-text="${t.decline}">${t.decline}</span></span></button>
+      <button type="button" class="btn btn--lime btn--sm" data-consent-choice="granted"><span class="btn__label"><span data-text="${t.accept}">${t.accept}</span></span></button>
     </div>
   </div>
-</div>` : '';
-const COOKIE_SETTINGS = GA ? '<button type="button" class="footer__cookie-btn" data-consent-open>Cookie settings</button>' : '';
+</div>`;
+};
+const cookieSettings = (lang) => (GA ? `<button type="button" class="footer__cookie-btn" lang="${lang === 'tr' ? 'tr' : 'en'}" data-consent-open>${(CONSENT_TEXT[lang] || CONSENT_TEXT.en).settings}</button>` : '');
 
 const sha = (buf, alg = 'sha256', enc = 'hex') => createHash(alg).update(buf).digest(enc);
 
@@ -268,8 +276,8 @@ async function main() {
       early_js: EARLY_JS,
       apply_form: APPLY_FORM,
       ga_meta: GA_META,
-      consent_banner: CONSENT_BANNER,
-      cookie_settings: COOKIE_SETTINGS,
+      consent_banner: consentBanner(meta.lang || 'en'),
+      cookie_settings: cookieSettings(meta.lang || 'en'),
       lang: meta.lang || 'en',
       title: meta.title,
       description: meta.description,
