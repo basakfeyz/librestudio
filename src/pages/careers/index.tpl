@@ -52,9 +52,9 @@
             <article class="job">
               <div class="job__top">
                 <div class="job__title"><h3 class="h5">Not listed yet?</h3><p class="job__meta">Remote · Any level</p></div>
-                <a class="btn btn--lime btn--sm" href="/careers/apply/" aria-label="Apply now: open application">Apply Now</a>
+                <a class="btn btn--lime btn--sm" href="mailto:{{email}}?subject=Open%20application" aria-label="Email us an open application">Email Us</a>
               </div>
-              <p>We open new roles from time to time, full-time ones included. Apply and tell us where you fit.</p>
+              <p>We open new roles from time to time, full-time ones included. Email your portfolio link to <a class="text-link" href="mailto:{{email}}?subject=Open%20application">{{email}}</a> and tell us where you fit.</p>
             </article>
           </div>
         </details>
