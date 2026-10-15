@@ -48,14 +48,15 @@ const STUDIO = {
     { name: 'Interaction, AI & No-Code', items: ['No-code development', 'Interaction design', 'Prototyping', 'Developer handoff', 'AI design workflows'] },
     { name: 'Product Marketing', items: ['Pitch deck', 'Sales deck', 'Showreel', 'Product explanation video', 'Presentation design', 'Motion video'] },
   ],
-  // the four cards in Projects; role ruled by Başak: end-to-end UI/UX design
+  // the four cards in Projects; role ruled by Başak: end-to-end UI/UX design. The apps are clients' products,
+  // so they are plain Things with their App Store link, not SoftwareApplication (that would claim we sell them).
   projects: [
-    { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', about: { '@type': 'MobileApplication', name: 'Lula: AI Bedtime Stories', operatingSystem: 'iOS', applicationCategory: 'LifestyleApplication', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
-    { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design', about: { '@type': 'MobileApplication', name: 'MONA AI: Photo & Video Studio', operatingSystem: 'iOS', applicationCategory: 'PhotographyApplication', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
+    { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', about: { '@type': 'Thing', name: 'Lula: AI Bedtime Stories', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
+    { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design', about: { '@type': 'Thing', name: 'MONA AI: Photo & Video Studio', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
     { name: 'Echopod UX Audit', tag: 'The full audit, walked through.', role: 'UX audit', url: 'https://youtu.be/a6h4D_BZkbM' },
     { name: 'Echopod Design System', tag: 'One source of truth for mobile & web apps.', role: 'Design system' },
   ],
-  reel: { name: 'Libre Studio showreel', description: 'The Libre Studio showreel: UX and product design, UI design, interaction, AI and no-code, and product marketing work for startups.', duration: 'PT1M24S', uploadDate: '2026-10-15', contentUrl: '/assets/video/showreel-1080.mp4', thumbnailUrl: '/assets/video/showreel-poster-1280.jpg' },
+  reel: { name: 'Libre Studio showreel', description: 'The Libre Studio showreel: UX and product design, UI design, interaction, AI and no-code, and product marketing work for startups.', duration: 'PT1M24S', uploadDate: '2026-10-15T00:00:00+03:00', contentUrl: '/assets/video/showreel-1080.mp4', thumbnailUrl: '/assets/video/showreel-poster-1280.jpg' },
 };
 
 const decode = (t) => t.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#39;|&rsquo;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
