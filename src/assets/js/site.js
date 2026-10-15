@@ -269,6 +269,19 @@
       else if (before === 'granted') { clearGACookies(); location.reload(); }
     }));
     document.querySelectorAll('[data-consent-open]').forEach((b) => b.addEventListener('click', show));
+    // Key actions, sent only when GA is loaded (the visitor accepted). Names are what you mark as key events in GA.
+    const track = (name, params) => { if (loaded && window.gtag) window.gtag('event', name, { page_path: location.pathname, ...params }); };
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a, button');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const label = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+      if (href.startsWith('https://calendar.app.google')) track('book_call', { link_text: label });
+      else if (href.startsWith('https://forms.clickup.com')) track('apply_form_open', { link_text: label });
+      else if (href.startsWith('mailto:')) track('email_click', { link_text: label });
+      else if (a.matches('[data-reel-open]')) track('showreel_play');
+      else if (/^https?:\/\//.test(href) && !href.startsWith(location.origin)) track('outbound_click', { link_url: href, link_text: label });
+    }, { capture: true });
     const choice = read();
     if (choice === 'granted') loadGA();
     else if (choice !== 'denied') show();
