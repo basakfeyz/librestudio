@@ -9,7 +9,7 @@
         <div class="stack">
           <p class="eyebrow" data-reveal>Case study · Mobile app</p>
           <h1 class="h1" id="case-title" data-split>MONA AI: your face, 500+ <span class="mark">styles<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
-          <p class="text-lg" data-reveal>An AI photo and video studio: upload a selfie, pick a style, get a portrait, a headshot or a short video. We designed it end to end, including the motion.</p>
+          <p class="text-lg" data-reveal>An AI photo and video studio: upload a selfie, pick a style, get a portrait, a headshot or a short video. We designed the whole app end to end, including the motion.</p>
         </div>
       </div>
       <dl class="facts" data-reveal>

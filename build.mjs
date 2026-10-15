@@ -53,7 +53,7 @@ const STUDIO = {
   projects: [
     { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', url: '/work/lula/', about: { '@type': 'Thing', name: 'Lula: AI Bedtime Stories', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
     { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design and motion', url: '/work/mona-ai/', about: { '@type': 'Thing', name: 'MONA AI: Photo & Video Studio', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
-    { name: 'Tales AI landing page', tag: 'A CRO-focused waitlist page with AI-generated illustration, built in Next.js.', role: 'Landing page design and front-end build', url: '/work/tales-ai-landing/', about: { '@type': 'Thing', name: 'tales-ai-landingpage on GitHub', url: 'https://github.com/basakfeyz/tales-ai-landingpage' } },
+    { name: 'Tales AI landing page', tag: 'A CRO-focused waitlist page illustrated with Nano Banana, built in Next.js.', role: 'Landing page design and front-end build', url: '/work/tales-ai-landing/', about: { '@type': 'Thing', name: 'tales-ai-landingpage on GitHub', url: 'https://github.com/basakfeyz/tales-ai-landingpage' } },
     { name: 'Echopod UX Audit', tag: 'The full audit, walked through.', role: 'UX audit', url: 'https://youtu.be/a6h4D_BZkbM' },
     { name: 'Echopod Design System', tag: 'One source of truth for mobile & web apps.', role: 'Design system' },
   ],

@@ -9,7 +9,7 @@
         <div class="stack">
           <p class="eyebrow" data-reveal>Case study · Landing page</p>
           <h1 class="h1" id="case-title" data-split>A waitlist page built to <span class="mark">convert<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
-          <p class="text-lg" data-reveal>The pre-launch page for Tales AI, the bedtime-story app that launched as Lula. Designed for one action, joining the waitlist, and set in one AI-illustrated storybook world.</p>
+          <p class="text-lg" data-reveal>The pre-launch page for Tales AI, the bedtime-story app that launched as Lula. Designed for one action, joining the waitlist, and set in one storybook world illustrated with Nano Banana.</p>
         </div>
       </div>
       <dl class="facts" data-reveal>
@@ -51,7 +51,7 @@
       <div class="ai-def">
         <h2 class="h2" id="imagery-title" data-split>AI imagery, art-directed into one world</h2>
         <div class="text-lg prose" data-reveal>
-          <p>Every illustration on the page is AI-generated. The craft is in making them look like they came from one storybook: the same midnight-navy sky and warm gold light, the same soft painterly finish, the same children and animal friends from scene to scene.</p>
+          <p>Every illustration on the page was generated with Nano Banana (Gemini). The craft is in making them look like they came from one storybook: the same midnight-navy sky and warm gold light, the same soft painterly finish, the same children and animal friends from scene to scene.</p>
           <p>That consistency matters more for a children's product than for most. Parents are wary of AI content for their kids, so the imagery has to feel warm and cared for, never generic. The same thinking carried into the app's hand-made illustration style.</p>
         </div>
       </div>
