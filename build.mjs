@@ -23,7 +23,7 @@ const SITE = {
   // Public share link of the ClickUp application form (forms.clickup.com/...). Empty = placeholder on /careers/apply/.
   // Google Analytics 4 Measurement ID (G-XXXXXXXXXX). Empty = no analytics, no banner, CSP stays closed.
   // GA loads only after a visitor presses Accept in the consent banner (site.js). Ruling: Başak, 15 Oct 2026.
-  ga_id: '',
+  ga_id: 'G-FTKN87RWZY',
   clickup_form_url: 'https://forms.clickup.com/9009072703/f/8cfq2hz-15532/7ZKOGCKK691U98W3FE',
 };
 
