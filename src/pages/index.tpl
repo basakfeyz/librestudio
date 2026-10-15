@@ -9,7 +9,7 @@
       <div class="hero__copy">
         <div class="stack">
           <h1 class="h1" id="hero-title" data-split>Digital experiences that resonate and result in <span class="mark">action<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
-          <p class="text-lg" data-reveal>Combining design, strategy and business experience for startups and professionals that want to stand out from the rest and succeed.</p>
+          <p class="text-lg" data-reveal>AI-enhanced UI, UX and product design for startups. Design engineering and motion on atomic design foundations, so your product, marketing and showreels scale from one system.</p>
         </div>
         <div class="actions actions--center" data-reveal>
           <a class="btn btn--lime" href="{{calendar}}" target="_blank" rel="noopener"><span class="btn__label"><span data-text="Book a Call">Book a Call</span></span></a>
@@ -128,6 +128,10 @@
         <details class="faq__item" data-accordion open>
           <summary class="faq__q"><span>What services do you offer?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
           <div class="faq__a" data-accordion-body><div><p>Product design end to end: UX research and audits, UI for web and mobile apps, design systems, websites, prototypes and developer handoff. Plus pitch decks, showreels and product videos when a launch needs them.</p></div></div>
+        </details>
+        <details class="faq__item" data-accordion>
+          <summary class="faq__q"><span>How do you use AI?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
+          <div class="faq__a" data-accordion-body><div><p>Every day, with a designer in charge of every decision. We work in Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations, so the UI, the marketing pages, the motion and the showreels all grow from one system. AI makes the work faster. The design decisions stay human.</p></div></div>
         </details>
         <details class="faq__item" data-accordion>
           <summary class="faq__q"><span>How do I start?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>

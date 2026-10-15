@@ -35,6 +35,94 @@ const INDEXNOW_KEY = '76fdde082d3b1c9f159cd54b5bff3696';
 // Crawlers we name explicitly so the welcome is on record, search and AI answer engines alike.
 const CRAWLERS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Applebot', 'Applebot-Extended', 'DuckDuckBot'];
 
+// ---------------------------------------------------------------- structured data (JSON-LD) and llms.txt
+// Rule: say only what the pages visibly say. Wording approved by Başak, 15 Oct 2026.
+const STUDIO = {
+  description: 'Libre Studio is a remote product design studio for startups. End-to-end UI, UX and product design, design engineering and motion design, made with AI-assisted workflows and a human in the loop. Atomic design foundations let the product, the marketing and the motion scale from one system. Founded by Başak Feyzioğlu. Based in Istanbul, working worldwide.',
+  founder: 'Başak Feyzioğlu',
+  knowsAbout: ['UI design', 'UX design', 'Product design', 'Design engineering', 'Motion design', 'Design systems', 'Atomic design', 'AI-assisted design', 'AI-enhanced design', 'Claude Code', 'Cursor', 'Figma Make', 'Claude Design', 'Pitch decks', 'Showreels'],
+  // the four service columns on the landing page, as shown there
+  services: [
+    { name: 'UX & Product Design', items: ['Strategy & concepting', 'UX audit', 'User research', 'A/B testing & heat mapping', 'User journeys', 'User testing'] },
+    { name: 'UI Design', items: ['UI audit', 'Website design', 'Web apps', 'Mobile app UI', 'Design systems', 'SaaS & dashboards'] },
+    { name: 'Interaction, AI & No-Code', items: ['No-code development', 'Interaction design', 'Prototyping', 'Developer handoff', 'AI design workflows'] },
+    { name: 'Product Marketing', items: ['Pitch deck', 'Sales deck', 'Showreel', 'Product explanation video', 'Presentation design', 'Motion video'] },
+  ],
+  // the four cards in Projects; role ruled by Başak: end-to-end UI/UX design
+  projects: [
+    { name: 'Lula: AI Bedtime Stories', tag: 'A new story, every night.', role: 'End-to-end UI/UX design', about: { '@type': 'MobileApplication', name: 'Lula: AI Bedtime Stories', operatingSystem: 'iOS', applicationCategory: 'LifestyleApplication', url: 'https://apps.apple.com/tr/app/lula-ai-bedtime-stories/id6775413640' } },
+    { name: 'MONA AI: Photo & Video Studio', tag: 'Your face, 500+ styles.', role: 'End-to-end UI/UX design', about: { '@type': 'MobileApplication', name: 'MONA AI: Photo & Video Studio', operatingSystem: 'iOS', applicationCategory: 'PhotographyApplication', url: 'https://apps.apple.com/tr/app/mona-ai-photo-video-studio/id6761020447' } },
+    { name: 'Echopod UX Audit', tag: 'The full audit, walked through.', role: 'UX audit', url: 'https://youtu.be/a6h4D_BZkbM' },
+    { name: 'Echopod Design System', tag: 'One source of truth for mobile & web apps.', role: 'Design system' },
+  ],
+  reel: { name: 'Libre Studio showreel', description: 'The Libre Studio showreel: UX and product design, UI design, interaction, AI and no-code, and product marketing work for startups.', duration: 'PT1M24S', uploadDate: '2026-10-15', contentUrl: '/assets/video/showreel-1080.mp4', thumbnailUrl: '/assets/video/showreel-poster-1280.jpg' },
+};
+
+const decode = (t) => t.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#39;|&rsquo;/g, "'").replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
+
+// Q&A pairs read back from the built page, so the markup always equals the visible FAQ
+function faqFrom(html) {
+  return [...html.matchAll(/<details class="faq__item"[\s\S]*?<summary[^>]*>([\s\S]*?)<\/summary>[\s\S]*?data-accordion-body>([\s\S]*?)<\/details>/g)]
+    .map(([, q, a]) => ({ q: decode(q), a: decode(a) }));
+}
+
+function jsonLd(meta, vars, html) {
+  const O = SITE.origin;
+  const org = {
+    '@type': 'Organization', '@id': `${O}/#organization`, name: 'Libre Studio', url: `${O}/`,
+    logo: { '@type': 'ImageObject', url: `${O}/assets/img/apple-touch-icon.png`, width: 180, height: 180 },
+    image: `${O}/assets/img/og.jpg`, email: SITE.email, description: STUDIO.description,
+    founder: { '@type': 'Person', '@id': `${O}/#founder`, name: STUDIO.founder },
+    address: { '@type': 'PostalAddress', addressLocality: 'Istanbul', addressCountry: 'TR' },
+    areaServed: 'Worldwide', knowsAbout: STUDIO.knowsAbout,
+  };
+  const graph = [
+    org,
+    { '@type': 'WebSite', '@id': `${O}/#website`, name: 'Libre Studio', url: `${O}/`, publisher: { '@id': `${O}/#organization` }, inLanguage: 'en' },
+    { '@type': 'WebPage', '@id': vars.canonical, url: vars.canonical, name: meta.title, description: meta.description, isPartOf: { '@id': `${O}/#website` }, about: { '@id': `${O}/#organization` }, inLanguage: vars.lang },
+  ];
+  if (meta.path === '/') {
+    org.hasOfferCatalog = {
+      '@type': 'OfferCatalog', name: 'Our Services',
+      itemListElement: STUDIO.services.map((sv) => ({ '@type': 'OfferCatalog', name: sv.name, itemListElement: sv.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name, provider: { '@id': `${O}/#organization` } } })) })),
+    };
+    graph.push({ '@type': 'VideoObject', '@id': `${O}/#showreel`, name: STUDIO.reel.name, description: STUDIO.reel.description, duration: STUDIO.reel.duration, uploadDate: STUDIO.reel.uploadDate, contentUrl: O + STUDIO.reel.contentUrl, thumbnailUrl: O + STUDIO.reel.thumbnailUrl, publisher: { '@id': `${O}/#organization` } });
+    graph.push({
+      '@type': 'ItemList', '@id': `${O}/#projects`, name: 'Projects',
+      itemListElement: STUDIO.projects.map((pr, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'CreativeWork', name: pr.name, description: `${pr.role} by Libre Studio. ${pr.tag}`, creator: { '@id': `${O}/#organization` }, ...(pr.url ? { url: pr.url } : {}), ...(pr.about ? { about: pr.about } : {}) } })),
+    });
+  }
+  const faq = faqFrom(html);
+  if (faq.length) graph.push({ '@type': 'FAQPage', '@id': `${vars.canonical}#faq`, mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) });
+  return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')}</script>`;
+}
+
+function llmsTxt(pages) {
+  const line = (p) => `- [${p.title.replace(/ · Libre Studio$/, '')}](${SITE.origin}${p.path}): ${p.description}`;
+  const main = pages.filter((p) => ['/', '/careers/', '/careers/apply/'].includes(p.path));
+  const legal = pages.filter((p) => !main.includes(p));
+  return `# Libre Studio
+
+> ${STUDIO.description}
+
+Libre Studio designs web apps, mobile apps, websites and design systems for startups, and the launch material around them: pitch decks, showreels and product videos. AI is used every day, with a designer in charge of every decision; the studio works in Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations, so the UI, the marketing pages, the motion and the showreels grow from one system.
+
+Services: ${STUDIO.services.map((sv) => `${sv.name} (${sv.items.join(', ')})`).join('; ')}.
+
+Projects: ${STUDIO.projects.map((pr) => `${pr.name}, ${(/^[A-Z][a-z]/.test(pr.role) ? pr.role.charAt(0).toLowerCase() + pr.role.slice(1) : pr.role)}${pr.about ? ` (${pr.about.url})` : pr.url ? ` (${pr.url})` : ''}`).join('; ')}.
+
+Contact: ${SITE.email}. Book a call: ${SITE.calendar}
+
+## Pages
+
+${main.map(line).join('\n')}
+
+## Optional
+
+${legal.map(line).join('\n')}
+`;
+}
+
 const FORM_ORIGIN = 'https://forms.clickup.com';
 if (SITE.clickup_form_url && !SITE.clickup_form_url.startsWith(FORM_ORIGIN + '/')) throw new Error('clickup_form_url must start with ' + FORM_ORIGIN);
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
@@ -166,8 +254,9 @@ async function main() {
       robots: meta.noindex ? '<meta name="robots" content="noindex">' : '',
       hreflang: hreflang(meta.path),
     };
-    const html = render(body, vars, partials);
+    let html = render(body, vars, partials);
     if (/\{\{|\}\}/.test(html)) throw new Error(`Unrendered template tag left in ${file}`);
+    if (!meta.noindex) html = html.replace('</head>', `${jsonLd(meta, vars, html)}\n</head>`);
     if (/[–—]/.test(html.replace(/<!--[\s\S]*?-->/g, ''))) throw new Error(`En or em dash found in ${file}: site copy uses periods and commas instead`);
 
     const rel = path.relative(path.join(SRC, 'pages'), file);
@@ -175,7 +264,7 @@ async function main() {
     await mkdir(path.dirname(outFile), { recursive: true });
     await writeFile(outFile, html);
     built.push({ urlPath: rel === '404.tpl' ? '/404.html' : meta.path, html });
-    if (!meta.noindex) sitemap.push({ loc: SITE.origin + meta.path, lastmod: await lastmod(file) });
+    if (!meta.noindex) sitemap.push({ loc: SITE.origin + meta.path, lastmod: await lastmod(file), title: meta.title, description: meta.description, path: meta.path });
   }
 
   const scriptHash = sha(EARLY_JS, 'sha256', 'base64');
@@ -229,6 +318,7 @@ async function main() {
   const robots = [...CRAWLERS.map((ua) => `User-agent: ${ua}\nAllow: /\n`), 'User-agent: *\nAllow: /\n', `Sitemap: ${SITE.origin}/sitemap.xml\n`].join('\n');
   await writeFile(path.join(OUT, 'robots.txt'), robots);
   await writeFile(path.join(OUT, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
+  await writeFile(path.join(OUT, 'llms.txt'), llmsTxt([...sitemap].sort((a, b) => a.path.localeCompare(b.path))));
   const xmlPages = sitemap.sort((a, b) => a.loc.localeCompare(b.loc)).map((u) => {
     const pair = ALTERNATES.find((a) => SITE.origin + a.en === u.loc || SITE.origin + a.tr === u.loc);
     const alt = pair ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${SITE.origin}${pair.en}"/>\n    <xhtml:link rel="alternate" hreflang="tr" href="${SITE.origin}${pair.tr}"/>` : '';
