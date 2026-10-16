@@ -29,6 +29,8 @@
         <div class="tools__group" data-reveal>
           <p class="eyebrow">Design the product</p>
           <dl>
+            <dt><a class="text-link" href="/idea-to-build-ready/">Idea to build-ready sprint</a></dt><dd>One fixed-scope sprint, three to six weeks, from early idea to a build-ready product design.</dd>
+            <dt><a class="text-link" href="/product-strategy/">Product strategy</a></dt><dd>From an early idea to a clear MVP scope, with the reasons written down.</dd>
             <dt><a class="text-link" href="/ui-ux-design/">UI/UX design</a></dt><dd>Mobile apps, web apps and dashboards, from research to a dev-ready prototype.</dd>
             <dt><a class="text-link" href="/ux-audit/">AI-assisted UX audit</a></dt><dd>Agents audit UX, UI, accessibility and motion end to end. Delivered as a product that says what to fix first and when.</dd>
           </dl>
@@ -44,6 +46,7 @@
         <div class="tools__group" data-reveal>
           <p class="eyebrow">Ship it</p>
           <dl>
+            <dt><a class="text-link" href="/prototyping/">Prototyping</a></dt><dd>Clickable, build-ready prototypes that hand over instead of being thrown away.</dd>
             <dt><a class="text-link" href="/design-engineering/">Design engineering</a></dt><dd>Designs that arrive as working front ends your developers can use.</dd>
             <dt><a class="text-link" href="/motion-design/">Motion design</a></dt><dd>Showreels, product videos and UI motion on motion tokens.</dd>
             <dt><a class="text-link" href="/work/librestudio-website/">SEO and GEO</a></dt><dd>Sites built to be found by Google and quoted by AI answers: structured data, llms.txt, IndexNow.</dd>
@@ -66,7 +69,7 @@
     <div class="svc__grid" data-reveal-group>
       <article class="svc__col svc__col--coral" data-reveal="bar">
         <h3 class="svc__title">UX &amp; Product Design</h3>
-        <ul class="svc__list"><li>Strategy &amp; concepting</li><li><a class="svc__link" href="/ux-audit/">AI-assisted UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
+        <ul class="svc__list"><li><a class="svc__link" href="/product-strategy/">Strategy &amp; concepting</a></li><li><a class="svc__link" href="/ux-audit/">AI-assisted UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>
@@ -74,7 +77,7 @@
       </article>
       <article class="svc__col svc__col--royal" data-reveal="bar">
         <h3 class="svc__title">Interaction, AI &amp; No-Code</h3>
-        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li>Prototyping</li><li>Developer handoff</li><li><a class="svc__link" href="/design-engineering/">Design engineering</a></li><li><a class="svc__link" href="/ai-design/">AI design workflows</a></li></ul>
+        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li><a class="svc__link" href="/prototyping/">Prototyping</a></li><li>Developer handoff</li><li><a class="svc__link" href="/design-engineering/">Design engineering</a></li><li><a class="svc__link" href="/ai-design/">AI design workflows</a></li></ul>
       </article>
       <article class="svc__col svc__col--lime" data-reveal="bar">
         <h3 class="svc__title">Product Marketing</h3>

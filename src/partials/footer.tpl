@@ -8,7 +8,10 @@
         <li><a href="/ai-design/">AI Design</a></li>
       </ul>
       <ul>
+        <li><a href="/idea-to-build-ready/">Idea to build-ready</a></li>
+        <li><a href="/product-strategy/">Product strategy</a></li>
         <li><a href="/ui-ux-design/">UI/UX design</a></li>
+        <li><a href="/prototyping/">Prototyping</a></li>
         <li><a href="/ux-audit/">UX audit</a></li>
         <li><a href="/design-engineering/">Design engineering</a></li>
         <li><a href="/motion-design/">Motion design</a></li>

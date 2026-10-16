@@ -41,7 +41,7 @@
     <div class="svc__grid" data-reveal-group>
       <article class="svc__col svc__col--coral" data-reveal="bar">
         <h3 class="svc__title">UX &amp; Product Design</h3>
-        <ul class="svc__list"><li>Strategy &amp; concepting</li><li><a class="svc__link" href="/ux-audit/">AI-assisted UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
+        <ul class="svc__list"><li><a class="svc__link" href="/product-strategy/">Strategy &amp; concepting</a></li><li><a class="svc__link" href="/ux-audit/">AI-assisted UX audit</a></li><li>User research</li><li>A/B testing &amp; heat mapping</li><li>User journeys</li><li>User testing</li></ul>
       </article>
       <article class="svc__col svc__col--violet" data-reveal="bar">
         <h3 class="svc__title">UI Design</h3>
@@ -49,7 +49,7 @@
       </article>
       <article class="svc__col svc__col--royal" data-reveal="bar">
         <h3 class="svc__title">Interaction, AI &amp; No-Code</h3>
-        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li>Prototyping</li><li>Developer handoff</li><li><a class="svc__link" href="/design-engineering/">Design engineering</a></li><li><a class="svc__link" href="/ai-design/">AI design workflows</a></li></ul>
+        <ul class="svc__list"><li>No-code development</li><li>Interaction design</li><li><a class="svc__link" href="/prototyping/">Prototyping</a></li><li>Developer handoff</li><li><a class="svc__link" href="/design-engineering/">Design engineering</a></li><li><a class="svc__link" href="/ai-design/">AI design workflows</a></li></ul>
       </article>
       <article class="svc__col svc__col--lime" data-reveal="bar">
         <h3 class="svc__title">Product Marketing</h3>
@@ -141,7 +141,7 @@
         </details>
         <details class="faq__item" data-accordion>
           <summary class="faq__q"><span>How do I start?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
-          <div class="faq__a" data-accordion-body><div><p>Book a call and bring the brief, however messy. If we are a fit, you get time, budget and milestone estimates, then a small demo task.</p></div></div>
+          <div class="faq__a" data-accordion-body><div><p>Book a call and bring the brief, however messy. If we are a fit, you get time, budget and milestone estimates, then a small demo task. Most projects start as an <a class="text-link" href="/idea-to-build-ready/">idea to build-ready sprint</a>.</p></div></div>
         </details>
         <details class="faq__item" data-accordion>
           <summary class="faq__q"><span>What is your process?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
