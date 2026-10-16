@@ -1,4 +1,4 @@
-<!--page {"title": "AI-Enhanced Product Design: How We Work with AI · Libre Studio", "description": "How Libre Studio designs with AI: a seven-stage cycle across Figma, Claude Code and Cursor, atomic design foundations, and a designer at every gate.", "path": "/ai-design/", "nav": "ai"} -->
+<!--page {"title": "AI-Native Product Design: How We Work with AI · Libre Studio", "description": "How Libre Studio designs with AI: a seven-stage cycle across Figma, Claude Code and Cursor, atomic design foundations, and a designer at every gate.", "path": "/ai-design/", "nav": "ai"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -8,7 +8,7 @@
     <div class="container hero__inner">
       <div class="hero__copy">
         <div class="stack">
-          <p class="eyebrow" data-reveal>AI-enhanced design</p>
+          <p class="eyebrow" data-reveal>AI-native product design</p>
           <h1 class="h1" id="ai-title" data-split>AI does the legwork. A <span class="mark">designer<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span> makes every call.</h1>
           <p class="text-lg" data-reveal>How we design UI, UX and products for startups with Claude Code, Cursor, Claude Design and Figma Make, on atomic design foundations that let your product, marketing and motion grow from one system.</p>
         </div>

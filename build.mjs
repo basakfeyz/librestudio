@@ -41,10 +41,10 @@ const CRAWLERS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-Sear
 // ---------------------------------------------------------------- structured data (JSON-LD) and llms.txt
 // Rule: say only what the pages visibly say. Wording approved by Başak, 15 Oct 2026.
 const STUDIO = {
-  description: 'Libre Studio is a remote product design studio for startups. End-to-end UI, UX and product design, design engineering and motion design, made with AI-assisted workflows and a human in the loop. Atomic design foundations let the product, the marketing and the motion scale from one system. Founded by Başak Feyzioğlu. Based in Istanbul, working worldwide.',
+  description: 'Libre Studio is an AI-native product design studio for startups. We turn early-stage ideas into build-ready products through product strategy, UX, interface design and prototyping. AI explores wide and fast; senior designers make every call, so the result is better product decisions, not more screens. Atomic design foundations let the product, the marketing and the motion scale from one system. Founded by Başak Feyzioğlu. Based in Istanbul, working worldwide.',
   founder: 'Başak Feyzioğlu',
   foundingDate: '2023',
-  knowsAbout: ['UI design', 'UX design', 'Product design', 'Design engineering', 'Motion design', 'Design systems', 'Atomic design', 'AI-assisted design', 'AI-enhanced design', 'Claude Code', 'Cursor', 'Figma Make', 'Claude Design', 'Pitch decks', 'Showreels', 'AI imagery', 'Illustration', 'Mascot design', 'SEO', 'Generative engine optimisation (GEO)'],
+  knowsAbout: ['UI design', 'UX design', 'Product design', 'Design engineering', 'Motion design', 'Design systems', 'Atomic design', 'AI-native product design', 'Product strategy', 'Prototyping', 'AI-assisted design', 'Claude Code', 'Cursor', 'Figma Make', 'Claude Design', 'Pitch decks', 'Showreels', 'AI imagery', 'Illustration', 'Mascot design', 'SEO', 'Generative engine optimisation (GEO)'],
   // the four service columns on the landing page, as shown there
   services: [
     { name: 'UX & Product Design', items: ['Strategy & concepting', 'UX audit', 'User research', 'A/B testing & heat mapping', 'User journeys', 'User testing'] },
@@ -90,7 +90,7 @@ function jsonLd(meta, vars, html) {
   ];
   if (meta.path === '/') {
     org.hasOfferCatalog = {
-      '@type': 'OfferCatalog', name: 'AI-enhanced design services',
+      '@type': 'OfferCatalog', name: 'AI-native design services',
       itemListElement: STUDIO.services.map((sv) => ({ '@type': 'OfferCatalog', name: sv.name, itemListElement: sv.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name, provider: { '@id': `${O}/#organization` } } })) })),
     };
     graph.push({ '@type': 'VideoObject', '@id': `${O}/#showreel`, name: STUDIO.reel.name, description: STUDIO.reel.description, duration: STUDIO.reel.duration, uploadDate: STUDIO.reel.uploadDate, contentUrl: O + STUDIO.reel.contentUrl, thumbnailUrl: O + STUDIO.reel.thumbnailUrl, publisher: { '@id': `${O}/#organization` } });

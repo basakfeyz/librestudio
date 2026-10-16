@@ -1,6 +1,6 @@
 # librestudio.co
 
-The website of [Libre Studio](https://librestudio.co), a remote product design studio for startups and B2B SaaS teams. Designed in Figma, built by hand in plain HTML, CSS and JavaScript with [Claude Code](https://claude.com/claude-code), with a human reviewing every step.
+The website of [Libre Studio](https://librestudio.co), an AI-native product design studio for startups. Designed in Figma, built by hand in plain HTML, CSS and JavaScript with [Claude Code](https://claude.com/claude-code), with a human reviewing every step.
 
 ![Landing page](docs/landing.jpg)
 

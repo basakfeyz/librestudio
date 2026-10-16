@@ -1,4 +1,4 @@
-<!--page {"title": "AI-Enhanced Product Design Studio for Startups · Libre Studio", "description": "UI, UX and product design for startups, made with AI-assisted workflows and a designer in charge. Design engineering, motion and atomic design systems.", "path": "/", "nav": "home"} -->
+<!--page {"title": "AI-Native Product Design Studio for Startups · Libre Studio", "description": "An AI-native product design studio for startups: product strategy, UX, interface design and prototyping, from early idea to a build-ready product.", "path": "/", "nav": "home"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -8,8 +8,8 @@
     <div class="container hero__inner">
       <div class="hero__copy">
         <div class="stack">
-          <h1 class="h1" id="hero-title" data-split>Digital experiences that resonate and result in <span class="mark">action<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span></h1>
-          <p class="text-lg" data-reveal>AI-enhanced UI, UX and product design for startups. Design engineering and motion on atomic design foundations, so your product, marketing and showreels scale from one system.</p>
+          <h1 class="h1" id="hero-title" data-split>From early idea to <span class="mark">build-ready<svg class="mark__svg" viewBox="0 0 240 24" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-draw><path d="M4 15 C 46 8, 92 19, 136 12 S 210 7, 236 13"/></svg></span> product</h1>
+          <p class="text-lg" data-reveal>We are an AI-native product design studio for startups. Product strategy, UX, interface design and prototyping: AI explores wide and fast, senior designers make the calls. Better product decisions, not more screens.</p>
         </div>
         <div class="actions actions--center" data-reveal>
           <a class="btn btn--lime" href="{{calendar}}" target="_blank" rel="noopener"><span class="btn__label"><span data-text="Book a Call">Book a Call</span></span></a>
@@ -36,7 +36,7 @@
   <!-- Services: the four columns from the showreel (Growth Figma 499:535, Asset Language §4.3) -->
   <section class="scheme-light svc" id="services" aria-labelledby="services-title">
     <div class="section section--md services-head">
-      <h2 class="h2 center" id="services-title" data-split>AI-enhanced design services</h2>
+      <h2 class="h2 center" id="services-title" data-split>AI-native design services</h2>
     </div>
     <div class="svc__grid" data-reveal-group>
       <article class="svc__col svc__col--coral" data-reveal="bar">
@@ -105,14 +105,14 @@
     <div class="container">
       <div class="section-title center narrow">
         <h2 class="h2" id="process-title" data-split>Our Process</h2>
-        <p class="text-lg" data-reveal>From the kickoff call to optimisation. The same steps on every project.</p>
+        <p class="text-lg" data-reveal>From early idea to build-ready product. The same steps on every project.</p>
       </div>
       <div class="process">
         <div class="process__line" aria-hidden="true"></div>
         <ol class="process__steps" data-stagger>
           <li class="process__step"><span class="process__num" aria-hidden="true">01</span><div class="stack"><h3 class="h5">Strategy</h3><p>A kickoff call, then time, budget and milestone estimates, and a small demo task before anything is signed.</p></div></li>
-          <li class="process__step"><span class="process__num" aria-hidden="true">02</span><div class="stack"><h3 class="h5">Design</h3><p>UX, UI and prototyping in one loop, with AI in the workflow and QA before every handoff.</p></div></li>
-          <li class="process__step"><span class="process__num" aria-hidden="true">03</span><div class="stack"><h3 class="h5">Development</h3><p>A token-strict Figma file your developers build from, or a no-code build when that ships faster.</p></div></li>
+          <li class="process__step"><span class="process__num" aria-hidden="true">02</span><div class="stack"><h3 class="h5">Design</h3><p>AI explores many directions fast. We choose one, with the reasons written down, then run UX, UI and prototyping in one loop, with QA before every handoff.</p></div></li>
+          <li class="process__step"><span class="process__num" aria-hidden="true">03</span><div class="stack"><h3 class="h5">Development</h3><p>A build-ready, token-strict Figma file and prototype your developers build from, or a no-code build when that ships faster.</p></div></li>
           <li class="process__step"><span class="process__num" aria-hidden="true">04</span><div class="stack"><h3 class="h5">Measure &amp; Optimise</h3><p>A post-project review, then test, measure and optimise what is live.</p></div></li>
         </ol>
       </div>
@@ -129,7 +129,11 @@
       <div class="faq__list" data-reveal>
         <details class="faq__item" data-accordion open>
           <summary class="faq__q"><span>What services do you offer?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
-          <div class="faq__a" data-accordion-body><div><p>Product design end to end: UX research and audits, UI for web and mobile apps, design systems, websites, prototypes and developer handoff. Plus pitch decks, showreels and product videos when a launch needs them.</p></div></div>
+          <div class="faq__a" data-accordion-body><div><p>Product strategy, UX, interface design and prototyping, from early idea to a build-ready product. Around that: design systems, design engineering, AI-assisted UX audits, motion and showreels, and SEO and GEO.</p></div></div>
+        </details>
+        <details class="faq__item" data-accordion>
+          <summary class="faq__q"><span>What does AI-native product design mean?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>
+          <div class="faq__a" data-accordion-body><div><p>AI is part of every step, not added at the end. Agents research, explore directions and check the details; senior designers decide what gets built. The point is better product decisions made earlier, not more screens. <a class="text-link" href="/ai-design/">How we work with AI</a>.</p></div></div>
         </details>
         <details class="faq__item" data-accordion>
           <summary class="faq__q"><span>How do you use AI?</span><img class="faq__icon" src="/assets/img/figma/chevron-up.svg" width="32" height="32" alt=""></summary>

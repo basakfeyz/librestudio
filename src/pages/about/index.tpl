@@ -36,7 +36,7 @@
       <div class="ai-def">
         <h2 class="h2" id="clients-title" data-split>What have we worked on?</h2>
         <div class="text-lg prose" data-reveal>
-          <p>Mostly startups in the UK and the US: AI-native consumer apps, B2B SaaS, dashboards and websites. Başak spent a year with the C-level team of a logistics SaaS company, designing three web products.</p>
+          <p>Mostly startups in the UK and the US: AI-native consumer apps, dashboards and websites. Başak spent a year with the C-level team of a logistics SaaS company, designing three web products.</p>
           <a class="upwork-card" href="https://www.upwork.com/freelancers/basakf" target="_blank" rel="noopener">
             <span class="upwork-card__badge">Top Rated on Upwork</span>
             <span class="upwork-card__name">Başak Feyzioğlu</span>

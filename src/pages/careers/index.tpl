@@ -1,4 +1,4 @@
-<!--page {"title": "Careers · Libre Studio", "description": "Join Libre Studio, a remote product design studio for startups and B2B SaaS teams. We work with high-agency designers, freelance and full-time.", "path": "/careers/", "nav": "careers"} -->
+<!--page {"title": "Careers · Libre Studio", "description": "Join Libre Studio, a remote product design studio for startups. We work with high-agency designers, freelance and full-time.", "path": "/careers/", "nav": "careers"} -->
 {{> head}}
 {{> nav}}
 <main id="main">
@@ -12,7 +12,7 @@
           <div>
             <h1 class="h2" id="careers-title" data-split>Design real products with a small, <em class="oblique">senior</em> studio.</h1>
             <div class="text-lg" data-reveal>
-              <p>Libre Studio is a remote product design studio for startups and B2B SaaS teams: web apps, mobile apps, websites and the systems behind them.</p>
+              <p>Libre Studio is a remote product design studio for startups and founders: web apps, mobile apps, websites and the systems behind them.</p>
               <p>We look for designers who own their work, communicate early and use AI well. Some roles are freelance, some full-time.</p>
             </div>
           </div>
@@ -47,7 +47,7 @@
                 <div class="job__title"><h3 class="h5">Senior Product Designer</h3><p class="job__meta">Remote · Freelance</p></div>
                 <a class="btn btn--lime btn--sm" href="/careers/apply/" aria-label="Apply now: Senior Product Designer">Apply Now</a>
               </div>
-              <p>Product work for startups and B2B SaaS teams: UX research, mobile, web apps, websites and CRO.</p>
+              <p>Product work for startups and founders: product strategy, UX research, mobile and web apps, websites and CRO.</p>
             </article>
             <article class="job">
               <div class="job__top">

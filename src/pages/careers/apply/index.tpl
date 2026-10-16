@@ -15,10 +15,10 @@
         <h2 class="h3" id="role-title">Senior Product Designer (Freelance, Remote)</h2>
         <div class="prose">
           <h3 class="h5">Who we are</h3>
-          <p>Libre Studio is a remote product design studio for startups and B2B SaaS teams, founded by Başak Feyzioğlu and based in Istanbul (GMT+3). We use AI tools every day, with a designer making every call. We are building a small group of senior freelance designers we can bring into client projects when the fit is right.</p>
+          <p>Libre Studio is an AI-native product design studio for startups, founded by Başak Feyzioğlu and based in Istanbul (GMT+3). We use AI tools every day, with a designer making every call. We are building a small group of senior freelance designers we can bring into client projects when the fit is right.</p>
 
           <h3 class="h5">What you'll work on</h3>
-          <p>Client projects for startups and B2B SaaS teams: end-to-end flows, UI in an existing or new design system, UX research and audits, mobile and web apps, websites and conversion work. Each project comes with a written brief, a scope and acceptance criteria per milestone.</p>
+          <p>Client projects for startups and founders: product strategy, end-to-end flows, UI in an existing or new design system, UX research and audits, mobile and web apps, websites and conversion work. Each project comes with a written brief, a scope and acceptance criteria per milestone.</p>
 
           <h3 class="h5">How we work</h3>
           <ul>
